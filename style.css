@@ -8,6 +8,10 @@ body{
     font-family: sans-serif;
 }
 
+div#container{
+    height: 5000px;
+}
+
 header{
     display: flex;
     background-color: #F7819F;
@@ -49,11 +53,12 @@ header ul li:hover{
 }
 
 #bloco1{
-    margin: 50px 0px 0px 0px;
+    margin: 80px auto 0px auto;
     border: 0px solid black;
     display: flex;
     justify-content: center;
-    height: 400px;
+    height: 500px;
+    width: 1300px;
 }
 
 #bloco1 div.text{
@@ -73,6 +78,7 @@ div.text h1{
 #bloco1 div.img{
     border: 0px solid green;
     width: 40%;
+    height: 400px;
 }
 
 #bloco1 div img{
@@ -83,7 +89,7 @@ div.text h1{
 /* #bloco2 - carrossel */
 
 #bloco2{
-    top: 350px;
+    top: 360px;
     left: 130px;
     position: absolute;
     margin: 30px auto;
@@ -107,4 +113,210 @@ div.text h1{
 .slide img{
     width: 100%;
     height: 100%;
+}
+
+/* bloco3 */
+
+#bloco3{
+    border: 0px solid green;
+    margin: 40px auto;
+    width: 1000px;
+}
+
+#bloco3 h2{
+    font-size: 2.5em;
+    font-family: serif;
+    font-weight: 100;
+    padding-left: 130px;
+} 
+
+#maisVendidos{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#maisVendidos div{
+    border: 0px solid red;
+    width: 15%;
+    height: 300px;
+}
+
+#maisVendidos div h4{
+    text-align: center;
+    font-family: serif;
+}
+
+#maisVendidos div img{
+    width: 100%;
+    height: 60%;
+}
+
+/* bloco4 */
+
+#bloco4{
+    padding: 60px;
+}
+
+#bloco4 #cuidadosPele{
+    margin: 0px auto;
+    width: 720px;
+    height: 550px;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    border: 0px solid red;
+    padding: 10px;
+}
+
+#cuidadosPele .titulo{
+    grid-column: 1/4;
+    grid-row: 1/3;
+    font-size: 1.2em;
+    font-family: serif;
+    font-weight: 100;
+}
+
+#cuidadosPele .img1{
+    grid-column: 1/4;
+    grid-row: 2/6;
+}
+
+#cuidadosPele .img2{
+    grid-column: 4/6;
+    grid-row: 1/4;
+}
+
+#cuidadosPele .img3{
+    grid-column: 4/6;
+    grid-row: 4/7;
+}
+
+#cuidadosPele div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* bloco5 */
+
+#bloco5{
+    padding: 60px;
+    margin-top: 20px;
+}
+
+#bloco5 #perfumes{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    border: 0px solid red;
+    width: 800px;
+    height: 450px;
+    position: relative;
+}
+
+#perfumes .titulo{
+    padding-top: 50px;
+    font-size: 1.5em;
+    font-family: serif;
+    font-weight: 100;
+    width: 40%;
+}
+
+#perfumes .img1{
+    position: absolute;
+    width: 220px;
+    height: 200px;
+    bottom: 10%;
+    left: 30%;
+}
+
+#perfumes .img2{
+    width: 45%;
+}
+
+#perfumes div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* bloco6 */
+
+#bloco6{
+    margin-top: 80px;
+    padding: 15px;
+}
+
+#bloco6 h1{
+    text-align: center;
+    font-family: serif;
+    font-size: 3em;
+}
+
+#bloco6 .flex-bloco6{
+    margin: 50px auto;
+    display: flex;
+    width: 1200px;
+    height: 330px;
+    justify-content: space-between;
+}
+
+.flex-bloco6 div{
+    margin-top: 0px;
+    width: 24%;
+    position: relative;
+}
+
+.flex-bloco6 h2{
+    font-family: serif;
+    font-size: 1.5em;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: black;
+    text-align: center;
+}
+
+.flex-bloco6 div img{
+    width: 100%;
+    height: 100%;
+}
+
+/* #bloco7 */
+
+#bloco7{
+    margin: 80px auto;
+    display: flex;
+    border: 0px solid red;
+    width: 1200px;
+    height: 350px;
+    justify-content: center;
+    column-gap: 40px;
+}
+
+#bloco7 .img{
+    border: 0px solid blue;
+    width: 40%;
+}
+
+#bloco7 .img img{
+    width: 100%;
+    height: 100%;
+}
+
+#bloco7 .conteudo{
+    border: 0px solid blue;
+    width: 40%;
+}
+
+#bloco7 .conteudo h1{
+    font-family: serif;
+    font-size: 2.5em;
+}
+
+#bloco7 .conteudo p{
+    margin-top: 30px;
+    font-size: 1.4em;
 }

@@ -1,3 +1,4 @@
+/*
 let cont = 1
 let margin_left = -8.3
 let img1 = document.querySelector('.img1')
@@ -16,4 +17,5 @@ let init = setInterval( () =>{
     cont++
     if(cont == 10){cont = 0}            
 
-},40000000)
+},4000000000)
+*/
