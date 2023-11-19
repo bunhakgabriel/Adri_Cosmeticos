@@ -1,3 +1,5 @@
+/*Função carrosel de imagens */
+
 /*
 let cont = 1
 let margin_left = -8.3
@@ -17,5 +19,22 @@ let init = setInterval( () =>{
     cont++
     if(cont == 10){cont = 0}            
 
-},4000000000)
+},4000)
 */
+
+/* Função vizualizar produtos individualmente */
+
+/*
+let divDisplayNone = document.getElementById('display-none')
+let produtos = document.getElementsByClassName('produtos')
+
+produtos[0].addEventListener('click', () => {
+    divDisplayNone.classList.add('active')
+})
+
+divDisplayNone.addEventListener('click', () => {
+    divDisplayNone.classList.remove('active')
+})
+*/
+
+

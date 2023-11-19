@@ -1,0 +1,189 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #F8E0E6;
+}
+
+header{
+    display: flex;
+    background-color: #F7819F;
+    justify-content: space-between;
+}
+
+header h3{
+    color: white;
+    margin: 0;
+    padding: 15px 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.7em;
+}
+
+header ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+header ul a{
+    text-decoration: none;
+    color: white;
+
+}
+
+header ul li{
+    padding: 10px 20px;
+    border: 1px solid #F7819F;
+}
+
+header ul li:hover{
+    border: 1px solid white;
+    transition: 0.5s;
+}
+
+header ul li.atual{
+    border: 1px solid white;
+}
+
+/* Cuidados com os cabelos
+   Cuidados com a pele
+   Maquiagens
+   Perfumes */
+
+#cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+    margin: 100px auto;
+    width: 1000px;
+}
+
+#cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+    margin: 40px 0px;
+    font-size: 2.5em;
+    font-family: serif;
+    font-weight: 100;
+    padding-left: 20px;
+} 
+
+.maisProdutos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 30px;
+}
+
+.maisProdutos div{
+    padding-top: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    width: 21%;
+    height: 280px;
+}
+
+.maisProdutos div:hover{
+    cursor: pointer;
+}
+
+.maisProdutos div h4{
+    text-align: center;
+    font-family: serif;
+}
+
+.maisProdutos div img{
+    width: 100%;
+    height: 75%;
+}
+
+/* Footer */
+
+Footer{
+    background-color: #F7819F;
+    padding: 10px;
+}
+
+Footer h1{
+    color: white;
+    margin: 20px 0px 30px 0px;
+    padding: 15px 30px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.7em;
+}
+
+Footer .flex-bloco8{
+    color: white;
+    display: flex;
+    justify-content: center;
+    column-gap: 5px;
+}
+
+Footer .flex-bloco8 div{
+    border: 1px solid black;
+}
+
+.flex-bloco8 h3{
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.flex-bloco8 ul{
+    list-style: none;
+}
+
+.flex-bloco8 ul li{
+    margin-top: 8px;
+}
+
+.flex-bloco8 .sobre{
+    border: 0px solid green;
+    width: 30%;
+}
+
+.flex-bloco8 .sobre p{
+    text-align: start;
+}
+
+.flex-bloco8 .categorias{
+    margin-left: 50px;
+    border: 0px solid green;
+    width: 20%;
+}
+
+.flex-bloco8 .categorias a{
+    text-decoration: none;
+    color: white;
+}
+
+.flex-bloco8 .categorias a:hover{
+    color: gray;
+}
+
+.flex-bloco8 .faleConosco{
+    border: 0px solid green;
+    width: 35%;
+}
+
+footer .icones{
+    margin: 40px 0px 0px 50px;
+}
+
+footer .icones a{
+    color: rgba(0, 0, 0, 0.0);
+}
+
+footer .icones i{
+    margin-left: 15px;
+    color: white;
+}
+
+footer p{
+    margin: 30px 0px 10px 0px;
+    color: white;
+    text-align: center;
+}
