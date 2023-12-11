@@ -1,3 +1,18 @@
+/* Função menu responsivo */
+
+const btn_menu = document.getElementById('btn-menu')
+const mobileMenu = document.querySelector('.mobile-menu')
+
+btn_menu.addEventListener('click', e => {
+
+    if(mobileMenu.classList.contains('active')){
+        mobileMenu.classList.remove('active')
+    } else{
+        mobileMenu.classList.add('active')
+    }
+
+}) /* Fim função menu responsivo */
+
 /*Função carrosel de imagens */
 
 /*
@@ -24,7 +39,7 @@ let init = setInterval( () =>{
 
 /* Função vizualizar produtos individualmente */
 
-/*
+
 let divDisplayNone = document.getElementById('display-none')
 let produtos = document.getElementsByClassName('produtos')
 
@@ -35,6 +50,6 @@ produtos[0].addEventListener('click', () => {
 divDisplayNone.addEventListener('click', () => {
     divDisplayNone.classList.remove('active')
 })
-*/
+
 
 

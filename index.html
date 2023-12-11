@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMediaQuery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
@@ -14,6 +15,12 @@
 </head>
 <body>
     <div id="container">
+
+        <div style="display: none;" class="icons">
+                <a href="https://contate.me/adrianacosmeticos" target="_blank">
+                    <i class="fa-brands fa-whatsapp fa-2xl wpp-link"></i>
+                </a>
+        </div>
 
         <header>
 
@@ -33,7 +40,29 @@
                     <li class="fale-conosco">Fale conosco</li>
                 </a>
             </ul>
+
+            <div class="mobile-menu-icon">
+                <button id="btn-menu"><i class="fa-solid fa-bars fa-2xl"></i></button>
+            </div>
+
         </header>
+
+        <div class="mobile-menu">
+            <ul>
+                <a href="">
+                    <li class="atual">Home</li>
+                </a>
+                <a href="produtos.html">
+                    <li>Produtos</li>
+                </a>
+                <a href="#bloco9">
+                    <li>Como Chegar</li>
+                </a>
+                <a href="">
+                    <li class="fale-conosco">Fale conosco</li>
+                </a>
+           </ul>
+        </div>
 
         <section id="bloco1">
             <div class="text">
@@ -118,6 +147,21 @@
                 </div>
                 <div>
                     <img src="img/logoSabrinaSatoTransparente.png" alt="">
+                </div>
+                <div>
+                    <img src="img/logoBocaRosa.png" alt="">
+                </div>
+                <div>
+                    <img src="img/logoPlayBoy.png" alt="">
+                </div>
+                <div>
+                    <img src="img/logoMariMariaMake01.png" alt="">
+                </div>
+                <div>
+                    <img src="img/logoRhenuksCosmeticos.png" alt="">
+                </div>
+                <div>
+                    <img src="img/logoLuisance.png" alt="">
                 </div>
             </div>
         </section>
@@ -238,6 +282,19 @@
 
         </section>
 
+        <section id="entregas">
+            <section>
+                <div class="conteudo">
+                    <p>Fazemos entregas em Curitiba e região, taxinha fixa para 
+                       Curitiba R$10.00, acima de R$130.00 livre de taxa. 
+                    </p>
+                    <button>Solicitar entrega</button>
+                </div>
+                <div class="img"><img src="img/MakeupDelivery_1.png" alt=""></div>
+            </section>
+
+        </section>
+
         <section id="bloco8">
 
             <h2>Confira mais produtos</h2> 
@@ -339,6 +396,7 @@
             </div>
         </section>
 
+        <!--
         <footer>
             <h1>AdriCosméticos</h1>
 
@@ -392,7 +450,7 @@
             <p>2023 Copyright - AdriCosméticos</p>
 
         </footer>
-
+-->
     </div>
     <script src="script.js"></script>
 </body>
