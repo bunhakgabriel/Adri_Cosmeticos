@@ -541,9 +541,6 @@
       width: 40%;
     }
     #perfumes .img1{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
       width: 390px;
       height: 170px;
       bottom: 5%;
@@ -558,39 +555,125 @@
   }
 
   @media screen and (max-width: 700px){
+    #bloco5{
+      margin-top: 10px;
+    }
     #bloco5 #perfumes{
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      column-gap: 35px;
-      width: 510px;
-      height: 270px;
-      position: relative;
+      justify-content: flex-end;
+      row-gap: 15px;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 370px;
     }
     #perfumes .titulo{
+      text-align: center;
       padding-top: 10px;
-      font-size: 1em;
-      font-family: serif;
-      font-weight: 100;
-      width: 40%;
+      width: 100%;
     }
     #perfumes .img1{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 280px;
-      height: 130px;
-      bottom: 5%;
-      right: 40%;
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 20px;
+      width: 45%;
+      height: 210px;
+      bottom: 15%;
+      left: 0%;
+    }
+    #perfumes .img1 img{
+      width: 60%;
+      height: 150px;
     }
     #perfumes .img1 button{
-      margin-top: 70px;
-      font-size: 1.2em;
-      width: 130px;
-      height: 35px;
+      width: 150px;
+      margin-top: 0px;
+    }
+    #perfumes .img2{
+      margin-right: 5%;
+      width: 50%;
+      height: 280px;
+  }
+  }
+
+  @media screen and (max-width: 550px){
+    #perfumes .titulo{
+      padding-top: 50px;
+    }
+    #perfumes .img1{
+      height: 180px;
+    }
+    #perfumes .img1 img{
+      height: 100px;
+    }
+    #perfumes .img1 button{
+      width: 120px;
+      height: 30px;
+    }
+    #perfumes .img2{
+      height: 220px;
     }
   }
 
+  @media screen and (max-width: 420px){
+    #bloco5 #perfumes{
+      row-gap: 0px;
+      height: 330px;
+    }
+    #perfumes .titulo{
+      height: 80px;
+      font-size: 0.8em;
+    }
+    #perfumes .img1{
+      justify-content: center;
+      flex-wrap: wrap;
+      row-gap: 0px;
+      height: 160px;
+      bottom: 10%;
+    }
+    #perfumes .img1 img{
+      width: 60%;
+      height: 70px;
+    }
+    #perfumes .img1 button{
+      font-size: 1.1em;
+      width: 100px;
+      margin-top: 15px;
+      height: 25px;
+    }
+    #perfumes .img2{
+      margin-right: 5%;
+      width: 50%;
+      height: 190px;
+  }
+  }
+
+  @media screen and (max-width: 370px){
+    #bloco5 #perfumes{
+      height: 260px;
+    }
+    #perfumes .titulo{
+      font-size: 0.7em;
+    }
+    #perfumes .img1{
+      height: 140px;
+      bottom: 8%;
+      left: 0%;
+    }
+    #perfumes .img1 img{
+      width: 60%;
+      height: 60px;
+    }
+    #perfumes .img1 button{
+      font-size: 1em;
+      width: 80px;
+    }
+    #perfumes .img2{
+      margin-right: 0%;
+      width: 55%;
+      height: 160px;
+  }
+  }
+
+  /*
   @media screen and (max-width: 560px){
     #bloco5 #perfumes{
       margin: 0 auto;
@@ -698,7 +781,7 @@
       height: 15px;
     } 
   }
-
+  */
 
 
 

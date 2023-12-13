@@ -42,7 +42,7 @@ header{
     z-index: 1;
     top: 0px;
     width: 100%;
-    position: static;
+    position: fixed;
     display: flex;
     background-color: #F7819F;
     justify-content: space-between;
@@ -396,6 +396,7 @@ div.text h1{
 
 #perfumes .img2{
     width: 45%;
+    border: 0px solid red;
 }
 
 #perfumes div img{
