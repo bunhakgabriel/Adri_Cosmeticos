@@ -651,6 +651,7 @@
       height: 260px;
     }
     #perfumes .titulo{
+      margin-bottom: 20px;
       font-size: 0.7em;
     }
     #perfumes .img1{
@@ -673,133 +674,275 @@
   }
   }
 
-  /*
-  @media screen and (max-width: 560px){
-    #bloco5 #perfumes{
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      column-gap: 15px;
+  /* Bloco 6 */
+  @media screen and (max-width: 1299px){
+    #bloco6{
+      margin: 40px auto;
+      width: 95vw;
+    }
+    #bloco6 .flex-bloco6{
       width: 100%;
-      height: 220px;
-      position: relative;
     }
-    #perfumes .titulo{
-      padding-top: 10px;
-      font-size: 0.8em;
-      font-family: serif;
-      font-weight: 100;
-      width: 40%;
+  }
+
+  @media screen and (max-width: 1050px){
+    #bloco6{
+      margin: 40px auto;
     }
-    #perfumes .img1{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 54%;
-      height: 90px;
-      bottom: 5%;
-      right: 40%;
+    #bloco6 .flex-bloco6{
+      height: 250px;
     }
-    #perfumes .img1 button{
-      margin-top: 40px;
+    #bloco6 h1{
+      font-size: 2.2em;
+    }
+    .flex-bloco6 h2{
+      font-size: 1.1em;
+      width: 70%;
+    }
+  }
+
+  @media screen and (max-width: 830px){
+    #bloco6{
+      margin-bottom: 0px;
+    }
+    #bloco6 .flex-bloco6{
+      height: 190px;
+      margin-top: 25px;
+    }
+    #bloco6 h1{
+      font-size: 2em;
+      margin: 0px auto;
+      margin-bottom: 0px;
+      width: 85%;
+      text-align: center;
+    }
+    .flex-bloco6 h2{
       font-size: 1em;
-      width: 100px;
-      height: 25px;
+      bottom: 5px;
+    }
+  }
+
+  @media screen and (max-width: 700px){
+    #bloco6{
+      padding: 15px 0px;
+    }
+    #bloco6 .flex-bloco6{
+      height: auto;
+      flex-wrap: wrap;
+      justify-content: center;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+    .flex-bloco6 div{
+      margin-top: 0px;
+      width: 45%;
+      position: relative;
+      height: 310px;
+    }
+    #bloco6 h1{
+      font-size: 2em;
+    }
+    .flex-bloco6 h2{
+      font-size: 1.5em;
+      bottom: 20px;
+      width: 80%;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    .flex-bloco6 div{
+      margin-top: 0px;
+      width: 45%;
+      position: relative;
+      height: 250px;
+    }
+    #bloco6 h1{
+      font-size: 1.7em;
+    }
+    .flex-bloco6 h2{
+      font-size: 1.3em;
+      bottom: 20px;
+      width: 80%;
     }
   }
 
   @media screen and (max-width: 420px){
-    #bloco5 #perfumes{
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      column-gap: 15px;
-      width: 100%;
-      height: 190px;
-      position: relative;
+    .flex-bloco6 div{
+      margin-top: 0px;
+      height: 200px;
     }
-    #perfumes .titulo{
-      padding-top: 10px;
-      font-size: 0.8em;
-      font-family: serif;
-      font-weight: 100;
-      width: 40%;
+    #bloco6 h1{
+      font-size: 1.4em;
     }
-    #perfumes .img2{
-      width: 45%;
+    .flex-bloco6 h2{
+      font-size: 1em;
+      bottom: 10px;
     }
-    #perfumes .img1{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 54%;
-      height: 70px;
-      bottom: 5%;
-      right: 40%;
-    }
-    #perfumes .img1 button{
-      margin-top: 25px;
-      font-size: 0.8em;
-      width: 70px;
-      height: 20px;
-    }    
   }
 
   @media screen and (max-width: 370px){
-    #bloco5 #perfumes{
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      column-gap: 15px;
+    #bloco6 .flex-bloco6{
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+    .flex-bloco6 div{
+      margin-top: 0px;
+      height: 160px;
+    }
+    #bloco6 h1{
+      font-size: 1.3em;
+    }
+    .flex-bloco6 h2{
+      font-size: 0.9em;
+      bottom: 5px;
       width: 100%;
-      height: 140px;
-      position: relative;
     }
-    #perfumes .titulo{
-      padding-top: 0px;
-      font-size: 0.6em;
-      font-family: serif;
-      font-weight: 100;
-      width: 40%;
+  }
+
+
+
+
+
+  /* Bloco 7 */
+  @media screen and (max-width: 1200px){
+    #bloco7{
+      width: 95vw;
+      height: 310px;
     }
-    #perfumes .img2{
+    #bloco7 .img{
       width: 45%;
     }
-    #perfumes .img1{
-      display: flex;
-      justify-content: space-between;
-      position: absolute;
-      width: 54%;
-      height: 50px;
-      bottom: 5%;
-      right: 40%;
+    #bloco7 .conteudo{
+      width: 45%;
     }
-    #perfumes .img1 button{
-      margin-top: 20px;
-      font-size: 0.5em;
-      width: 50px;
-      height: 15px;
-    } 
-  }
-  */
-
-
-
-
-
-
-  /* Bloco 6 */
-  @media screen and (max-width: 1500px){
-    #bloco6{
-      display: none;
+    #bloco7 .conteudo h1{
+      font-size: 2.3em;
+    }
+    
+    #bloco7 .conteudo p{
+        margin-top: 25px;
+        font-size: 1.3em;
+        width: auto;
     }
   }
-  /* Bloco 7 */
-  @media screen and (max-width: 1500px){
+
+  @media screen and (max-width: 900px){
     #bloco7{
-      display: none;
+      height: 260px;
+      column-gap: 20px;
+    }
+    #bloco7 .img{
+      width: 45%;
+    }
+    #bloco7 .conteudo{
+      width: 50%;
+    }
+    #bloco7 .conteudo h1{
+      font-size: 1.9em;
+    }
+    
+    #bloco7 .conteudo p{
+        margin-top: 10px;
+        font-size: 1.1em;
     }
   }
+
+  @media screen and (max-width: 720px){
+    #bloco7{
+      margin-top: 20px;
+      flex-wrap: wrap;
+      height: auto;
+      column-gap: 20px;
+    }
+    #bloco7 .img{
+      width: 70%;
+      height: 280px;
+    }
+    #bloco7 .conteudo{
+      width: 70%;
+    }
+    #bloco7 .conteudo h1{
+      display: none;
+    }
+
+    #bloco7 .h1-none{
+      font-size: 2em;
+      display: block;
+      margin-bottom: 30px;
+      width: 60%;
+      text-align: center;
+    }
+    
+    #bloco7 .conteudo p{
+      text-align: center;
+      margin: 35px auto;
+      font-size: 1.5em;
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+    #bloco7 .img{
+      width: 80%;
+      height: 240px;
+    }
+    #bloco7 .conteudo{
+      width: 80%;
+    }
+    #bloco7 .h1-none{
+      font-size: 1.6em;
+      width: 80%;
+    }
+    
+    #bloco7 .conteudo p{
+      margin: 35px auto;
+      font-size: 1.3em;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 420px){
+    #bloco7 .img{
+      width: 90%;
+      height: 240px;
+    }
+    #bloco7 .conteudo{
+      width: 90%;
+    }
+    #bloco7 .h1-none{
+      font-size: 1.5em;
+    }
+    
+    #bloco7 .conteudo p{
+      font-size: 1.2em;
+    }
+  }
+
+  @media screen and (max-width: 350px){
+    #bloco7 .img{
+      width: 90%;
+      height: 160px;
+    }
+    #bloco7 .conteudo{
+      width: 90%;
+    }
+    #bloco7 .h1-none{
+      width: 90%;
+      font-size: 1.2em;
+    }
+    
+    #bloco7 .conteudo p{
+      font-size: 1em;
+      margin: 25px auto;
+    }
+  }
+
+
+
+
+
+
+
   /* Bloco entregas */
   @media screen and (max-width: 1500px){
     #entregas{
