@@ -457,6 +457,7 @@ div.text h1{
 /* #bloco7 */
 
 #bloco7{
+    border: 0px solid black;
     margin: 80px auto;
     display: flex;
     width: 1200px;
@@ -515,23 +516,34 @@ div.text h1{
     border: 0px solid black;
 }
 
-#entregas .conteudo p{
+#entregas .conteudo-display-none{
+    display: none;
+    width: 40%;
+    border: 0px solid black;
+}
+
+#entregas .conteudo p,
+#entregas .conteudo-display-none p{
     font-size: 1.6em;
     padding-top: 60px;
     text-align: center;
 }
 
-#entregas .conteudo button{
+#entregas .conteudo button,
+#entregas .conteudo-display-none button{
+    margin: 25px 0px 0px 0px;
+    margin-left: 50%;
+    transform: translateX(-50%);
     font-size: 1.2em;
     color: black;
     background-color: rgba(0, 0, 0, 0.0);
     border: 1px solid black;
-    margin: 25px 0px 0px 25%;
     width: 200px;
     height: 40px;
 }
 
-#entregas .conteudo button:hover{
+#entregas .conteudo button:hover,
+#entregas .conteudo-display-none button:hover{
     cursor: pointer;
     transition: 0.2s;
     color: #848484;
@@ -549,6 +561,7 @@ div.text h1{
     height: 100%;
 }
 
+
 /* bloco8 */
 
 #bloco8{
@@ -565,6 +578,7 @@ div.text h1{
 } 
 
 #maisProdutos{
+    border: 0px solid red;
     margin-top: 80px;
     display: flex;
     flex-wrap: wrap;
@@ -612,8 +626,10 @@ div.text h1{
 }
 
 #display-none .produto1{
-    margin: 100px 0px 0px 50%;
-    transform: translateX(-50%);
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 900px;
     height: 450px;
     display: flex;
@@ -652,19 +668,21 @@ div.text h1{
 /* Bloco9 */
 
 #bloco9{
-
+    border: 0px solid red;
 }
 
 #bloco9 #rotas{
+    border: 0px solid black;
     margin: 20px auto 50px auto;
     width: 800px;
 }
 
 #rotas h1{
+    border: 1px solid re;
     font-family: serif;
     font-weight: 100;
     font-size: 2.5em;
-    margin: 60px 0px 30px 0px;
+    margin: 0px 0px 30px 0px;
 }
 
 #rotas iframe{
@@ -690,11 +708,15 @@ Footer .flex-bloco8{
     color: white;
     display: flex;
     justify-content: center;
-    column-gap: 5px;
+    column-gap: 20px;
 }
 
-Footer .flex-bloco8 div{
-    border: 1px solid black;
+footer .flex-bloco8{
+    border: 0px solid black;
+}
+
+.flex-bloco8 div{
+    border: 0px solid black;
 }
 
 .flex-bloco8 h3{
@@ -711,17 +733,20 @@ Footer .flex-bloco8 div{
 }
 
 .flex-bloco8 .sobre{
-    border: 0px solid green;
     width: 30%;
 }
 
 .flex-bloco8 .sobre p{
     text-align: start;
+    margin-top: 0px;
+}
+
+.flex-bloco8 .sobre h3{
+    margin-bottom: 18px;
 }
 
 .flex-bloco8 .categorias{
     margin-left: 50px;
-    border: 0px solid green;
     width: 20%;
 }
 
@@ -735,7 +760,6 @@ Footer .flex-bloco8 div{
 }
 
 .flex-bloco8 .faleConosco{
-    border: 0px solid green;
     width: 35%;
 }
 
