@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styleProdutos.css">
+    <link rel="stylesheet" href="produtosMediaQuery.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
@@ -15,7 +16,13 @@
 <body>
     <div id="container">
 
-        <header>
+        <div style="display: none;" class="icons">
+            <a href="https://contate.me/adrianacosmeticos" target="_blank">
+                <i class="fa-brands fa-whatsapp fa-2xl wpp-link"></i>
+            </a>
+    </div>
+
+    <header>
 
         <h3>AdriCosméticos</h3>
 
@@ -23,17 +30,39 @@
             <a href="index.html">
                 <li>Home</li>
             </a>
-            <a href="">
-                <li class="atual">Produtos</li>
+            <a href="produtos.html">
+                <li  class="atual">Produtos</li>
             </a>
-            <a href="index.html#bloco9">
+            <a href="#bloco9">
                 <li>Como Chegar</li>
             </a>
             <a href="">
                 <li class="fale-conosco">Fale conosco</li>
             </a>
         </ul>
-        </header>
+
+        <div class="mobile-menu-icon">
+            <button id="btn-menu"><i class="fa-solid fa-bars fa-2xl"></i></button>
+        </div>
+
+    </header>
+
+    <div class="mobile-menu">
+        <ul>
+            <a href="index.html">
+                <li class="atual">Home</li>
+            </a>
+            <a href="produtos.html">
+                <li>Produtos</li>
+            </a>
+            <a href="#bloco9">
+                <li>Como Chegar</li>
+            </a>
+            <a href="">
+                <li class="fale-conosco">Fale conosco</li>
+            </a>
+       </ul>
+    </div>
 
         <section id="cuidadosCabelos">
 
@@ -318,5 +347,6 @@
         </footer>
 
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

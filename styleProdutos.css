@@ -55,10 +55,67 @@ header ul li.atual{
     border: 1px solid white;
 }
 
-/* Cuidados com os cabelos
+/* Menu responsivo */
+
+header .mobile-menu-icon{
+    padding: 20px 15px;
+    display: none;
+    border: 0px solid red;
+  }
+  
+  header .mobile-menu-icon button{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+    border: 0px;
+  }
+  
+  header .mobile-menu-icon i{
+    color: white;
+    font-size: 35px;
+  }
+  
+  .mobile-menu{
+    position: fixed;
+    position: static;
+    width: 100%;
+    display: none;
+    padding: 10px;
+    border-top: 1px solid white;
+    background-color: #F7819F;
+  }
+  
+  .mobile-menu a{
+    font-family: sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  
+  .mobile-menu ul{
+    padding: 0px;
+    text-align: center;
+    list-style: none;
+  }
+  
+  .mobile-menu ul li{
+    border-bottom: 1px solid white ;
+    padding: 15px 5px;
+  }
+  
+  .active{
+    display: block;
+  }
+
+/* Fim menu responsivo */
+
+
+/* 
+   Cuidados com os cabelos
    Cuidados com a pele
    Maquiagens
-   Perfumes */
+   Perfumes 
+*/
+
 
 #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
     margin: 100px auto;

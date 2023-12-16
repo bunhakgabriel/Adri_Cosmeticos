@@ -1,0 +1,234 @@
+/* Header responsivo */
+@media screen and (max-width: 864px){
+    header ul li{
+      padding: 5px 10px;
+    }
+    header h3{
+      font-size: 2.4em;
+    }
+  }
+  
+  @media screen and (max-width: 756px){
+    header h3{
+      font-size: 2.2em;
+    }
+    header ul{
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: 681px){
+    .active{
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 680px){
+    header ul{
+      display: none;
+    }
+    .mobile-menu{
+      top: 76px;
+    }
+    header .mobile-menu-icon{
+      display: block;
+    }
+    header .mobile-menu-icon button:hover{
+      cursor: pointer;
+    }
+    .mobile-menu a{
+      font-size: 1.1em;
+    }
+  }
+
+  @media screen and (max-width: 370px){
+    .mobile-menu a{
+      font-size: 0.9em;
+    }
+    .mobile-menu{
+      top: 68px;
+    }
+  }
+
+  @media screen and (max-width: 310px){
+    .mobile-menu{
+      top: 59px;
+    }
+  }
+
+/* Fim Header responsivo */
+
+/* 
+   Cuidados com os cabelos
+   Cuidados com a pele
+   Maquiagens
+   Perfumes 
+*/
+
+
+@media screen and (max-width: 1100px){
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+        margin-top: 70px;
+        width: 95vw;
+    }
+    .maisProdutos{
+        margin: 40px auto;
+        width: 100%;
+    }
+    .maisProdutos div{
+        height: 270px;
+    }
+}
+
+@media screen and (max-width: 860px){
+    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+        padding: 0;
+        text-align: center;
+        font-size: 2.3em;
+        margin-bottom: 0px;
+    }
+    .maisProdutos{
+        margin-top: 50px;
+        justify-content: center;
+        column-gap: 15px;
+        row-gap: 15px;
+    }
+    .maisProdutos div{
+        width: 22%;
+        height: 230px;
+    }
+    .maisProdutos div h4{
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .maisProdutos div{
+      width: 31%;
+      height: 250px;
+    }
+    .maisProdutos div h4{
+      font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 550px){
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+      width: 98vw;
+      margin: 60px auto;
+    }
+    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+      font-size: 2em;
+    }
+    .maisProdutos{
+      margin-top: 40px;
+      column-gap: 5px;
+      row-gap: 5px;
+    }
+    .maisProdutos div{
+      width: 32%;
+      height: 220px;
+    }
+    .maisProdutos div h4{
+      font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 440px){
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+      width: 97vw;
+    }
+    .maisProdutos{
+      column-gap: 5px;
+      row-gap: 5px;
+    }
+    .maisProdutos div{
+      width: 32%;
+      height: 180px;
+    }
+    .maisProdutos div h4{
+      font-size: 0.7em;
+      font-family: sans-serif;
+    }
+}
+
+
+
+
+  /* Footer */
+  @media screen and (max-width: 900px){
+    footer{
+
+    }
+    footer .flex-bloco8{
+
+    }
+    footer .flex-bloco8 h3{
+      font-size: 1.6em;
+    }
+    .flex-bloco8 .sobre {
+      width: 30%;
+    }
+    .flex-bloco8 p,
+    .flex-bloco8 ul{
+      font-size: 0.9em;
+    }
+    .flex-bloco8 .categorias{
+      margin-left: 20px;
+      width: 20%;
+    }
+    .flex-bloco8 .faleConosco{
+      width: 35%;
+      margin-left: 20px;
+    } 
+  }
+
+  @media screen and (max-width: 700px){
+    footer .flex-bloco8{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      row-gap: 20px;
+      column-gap: 40px;
+      width: 90%;
+      margin: 0 auto;
+    }
+    footer .flex-bloco8 h3{
+      font-size: 1.8em;
+    }
+    .flex-bloco8 .sobre {
+      width: 55%;
+    }
+    .flex-bloco8 p,
+    .flex-bloco8 ul{
+      font-size: 1em;
+    }
+    .flex-bloco8 .categorias{
+      margin-left: 0px;
+      width: 35%;
+    }
+    .flex-bloco8 .faleConosco{
+      width: 70%;
+      margin-left: 0px;
+    } 
+  }
+
+  @media screen and (max-width: 500px){
+    footer .flex-bloco8{
+      justify-content: center;
+      width: 90%;
+      margin-bottom: 50px;
+    }
+    .flex-bloco8 .sobre {
+      width: 90%;
+    }
+    .flex-bloco8 p,
+    .flex-bloco8 ul{
+      font-size: 0.9em;
+    }
+    .flex-bloco8 .categorias{
+      width: 90%;
+    }
+    .flex-bloco8 .faleConosco{
+      width: 90%;
+    } 
+  }

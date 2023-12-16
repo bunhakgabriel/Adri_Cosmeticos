@@ -1,5 +1,7 @@
 /* Função menu responsivo */
 
+console.log('teste')
+
 const btn_menu = document.getElementById('btn-menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 
@@ -39,7 +41,7 @@ let init = setInterval( () =>{
 
 /* Função vizualizar produtos individualmente */
 
-
+/*
 let divDisplayNone = document.getElementById('display-none')
 let produtos = document.getElementsByClassName('produtos')
 
@@ -50,6 +52,6 @@ produtos[0].addEventListener('click', () => {
 divDisplayNone.addEventListener('click', () => {
     divDisplayNone.classList.remove('active')
 })
-
+*/
 
 
