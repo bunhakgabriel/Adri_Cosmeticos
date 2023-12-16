@@ -43,6 +43,7 @@ header{
     top: 0px;
     width: 100%;
     position: fixed;
+    position: static;
     display: flex;
     background-color: #F7819F;
     justify-content: space-between;
@@ -109,6 +110,7 @@ header .mobile-menu-icon{
   
   .mobile-menu{
     position: fixed;
+    position: static;
     width: 100%;
     display: none;
     padding: 10px;
@@ -142,7 +144,7 @@ header .mobile-menu-icon{
 
 #bloco1{
     border: 0px solid red;
-    margin: 140px auto 0px auto;
+    margin: 80px auto 0px auto;
     display: flex;
     justify-content: center;
     height: 500px;
@@ -609,7 +611,7 @@ div.text h1{
 
 /* Bloco8 display-none */
 
-#bloco8 #display-none{
+#bloco8 .display-none{
     display: none;
     width: 100%;
     height: 100%;
@@ -621,11 +623,11 @@ div.text h1{
     backdrop-filter: blur(2px);
 }
 
-#bloco8 #display-none.active{
+#bloco8 .display-none.active{
     display: block;
 }
 
-#display-none .produto1{
+.produto{
     position: absolute;
     top: 40%;
     left: 50%;
@@ -636,30 +638,26 @@ div.text h1{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-#display-none .produto1 img{
-
-}
-
-#display-none .produto1 .conteudo{
+.produto .conteudo{
     color: white;
     background-color: #2E2E2E;
 }
 
-#display-none .produto1 h1{
+.produto h1{
     font-family: serif;
     margin-top: 70px;
     font-size: 1.6em;
     padding-left: 20px;
 }
 
-#display-none .produto1 h3{
+.produto h3{
     text-align: left;
     font-size: 2em;
     padding-left: 20px;
     font-weight: 100;
 }
 
-#display-none .produto1 p{
+.produto p{
     font-family: serif;
     padding: 20px;
     font-size: 1.2em;

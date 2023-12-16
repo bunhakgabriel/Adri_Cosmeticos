@@ -55,6 +55,27 @@ header ul li.atual{
     border: 1px solid white;
 }
 
+div.icons a{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+div.icons .wpp-link{
+    background-color: #25d366;
+    width: 70px;
+    height: 65px;
+    color: white;
+    border-radius: 50px;
+    padding-top: 31px;
+    text-align: center;
+    font-size: 50px;
+    z-index: 1000;
+}
+
 /* Menu responsivo */
 
 header .mobile-menu-icon{
@@ -156,6 +177,62 @@ header .mobile-menu-icon{
 .maisProdutos div img{
     width: 100%;
     height: 75%;
+}
+
+/* produtos display-none */
+
+#cuidadosCabelos .display-none, #cuidadosPele .display-none, 
+#maquiagem .display-none, #perfumes .display-none{
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+    background-color: rgba(150, 150, 150, .6);
+    backdrop-filter: blur(2px);
+}
+
+#cuidadosCabelos .display-none.active, #cuidadosPele .display-none.active,
+#maquiagem .display-none.active, #perfumes .display-none.active{
+    display: block;
+}
+
+.produto{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 450px;
+    display: flex;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.produto .conteudo{
+    color: white;
+    background-color: #2E2E2E;
+}
+
+.produto h1{
+    font-family: serif;
+    margin-top: 70px;
+    font-size: 1.6em;
+    padding-left: 20px;
+}
+
+.produto h3{
+    text-align: left;
+    font-size: 2em;
+    padding-left: 20px;
+    font-weight: 100;
+}
+
+.produto p{
+    font-family: serif;
+    padding: 20px;
+    font-size: 1.2em;
 }
 
 /* Footer */
