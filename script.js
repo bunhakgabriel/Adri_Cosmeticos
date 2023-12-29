@@ -15,7 +15,7 @@ btn_menu.addEventListener('click', e => {
 
 /*Função carrosel de imagens */
 
-/*
+
 let cont = 1
 let margin_left = -8.3
 let img1 = document.querySelector('.img1')
@@ -35,7 +35,7 @@ let init = setInterval( () =>{
     if(cont == 10){cont = 0}            
 
 },4000)
-*/
+
 
 /* Função vizualizar produtos individualmente */
 
