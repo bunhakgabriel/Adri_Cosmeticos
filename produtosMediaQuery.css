@@ -204,6 +204,16 @@
       font-size: 1.1em;
       padding: 10px;
     }
+    .display-none a{
+      font-family: serif;
+      font-size: 1.1em;
+      border: 1px solid white;
+      text-decoration: none;
+      color: white;
+      margin-top: -1px;
+      height: 28px;
+      padding: 3px 8px;
+  }
   }
 
   @media screen and (max-width: 550px){
@@ -228,6 +238,17 @@
     .display-none .produto p{
       padding: 20px;
       text-align: center;
+    }
+    .display-none .saibaMais{
+      flex-direction: column;
+      row-gap: 0px;
+      align-items: center;
+    }
+    .display-none .saibaMais h3{
+      padding-left: 0px;
+    }
+    .display-none .saibaMais a{
+      width: 100px;
     }
   }
   

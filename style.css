@@ -515,7 +515,6 @@ div.text h1{
 
 #entregas .conteudo{
     width: 40%;
-    border: 0px solid black;
 }
 
 #entregas .conteudo-display-none{
@@ -526,30 +525,28 @@ div.text h1{
 
 #entregas .conteudo p,
 #entregas .conteudo-display-none p{
-    font-size: 1.6em;
+    font-size: 1.3em;
     padding-top: 60px;
     text-align: center;
 }
 
-#entregas .conteudo button,
-#entregas .conteudo-display-none button{
-    margin: 25px 0px 0px 0px;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2em;
-    color: black;
-    background-color: rgba(0, 0, 0, 0.0);
+#entregas .conteudo a,
+#entregas .conteudo-display-none a{
+    margin: 15px auto;
     border: 1px solid black;
-    width: 200px;
-    height: 40px;
+    display: block;
+    color: black;
+    text-decoration: none;
+    width: 90px;
+    padding: 5px 10px;
+    padding-top: 7px;
 }
 
-#entregas .conteudo button:hover,
-#entregas .conteudo-display-none button:hover{
-    cursor: pointer;
-    transition: 0.2s;
+#entregas .conteudo a:hover,
+#entregas .conteudo-display-none a:hover{
     color: #848484;
     border: 1px solid #848484;
+    transition: 0.2s;
 }
 
 #entregas .img{
@@ -641,6 +638,7 @@ div.text h1{
 .produto .conteudo{
     color: white;
     background-color: #2E2E2E;
+    padding-bottom: 20px;
 }
 
 .produto h1{
@@ -652,9 +650,11 @@ div.text h1{
 
 .produto h3{
     text-align: left;
+    margin-top: 0px;
     font-size: 2em;
     padding-left: 20px;
     font-weight: 100;
+    display: inline-block;
 }
 
 .produto p{
@@ -662,6 +662,29 @@ div.text h1{
     padding: 20px;
     font-size: 1.2em;
 }
+
+.display-none .saibaMais{
+    display: flex;
+    column-gap: 10%;
+}
+
+.display-none a{
+    display: block;
+    font-family: serif;
+    font-size: 1.2em;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    margin-top: 3px;
+    height: 30px;
+    padding: 4px 10px;
+}
+
+.display-none a:hover{
+    cursor: pointer;
+    color: #848484;
+}
+
 
 /* Bloco9 */
 

@@ -213,6 +213,7 @@ header .mobile-menu-icon{
 .produto .conteudo{
     color: white;
     background-color: #2E2E2E;
+    padding-bottom: 20px;
 }
 
 .produto h1{
@@ -233,6 +234,28 @@ header .mobile-menu-icon{
     font-family: serif;
     padding: 20px;
     font-size: 1.2em;
+}
+
+.display-none .saibaMais{
+    display: flex;
+    column-gap: 10%;
+}
+
+.display-none a{
+    display: block;
+    font-family: serif;
+    font-size: 1.2em;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    margin-top: 3px;
+    height: 30px;
+    padding: 4px 10px;
+}
+
+.display-none a:hover{
+    cursor: pointer;
+    color: #848484;
 }
 
 /* Footer */

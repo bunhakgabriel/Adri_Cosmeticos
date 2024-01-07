@@ -951,20 +951,20 @@
     #entregas .conteudo p{
       padding-top: 40px;
       height: auto;
-
     }
-    #entregas .conteudo button{
-      margin-left: 50%;
-      transform: translateX(-50%);
-      height: 40px;
-      width: 200px;
+  }
+
+  @media screen and (max-width: 992px){
+    #entregas .conteudo p{
+      font-size: 1.2em;
+      padding-top: 30px;
     }
   }
 
   @media screen and (max-width: 950px){
     #entregas section{
       height: 240px;
-      column-gap: 40px;
+      column-gap: 30px;
     }
     #entregas .img{
       height: auto;
@@ -974,12 +974,15 @@
       width: 45%;
     }
     #entregas .conteudo p{
-      font-size: 1.4em;
-      padding-top: 45px;
+      font-size: 1.2em;
+      padding-top: 30px;
     }
-    #entregas .conteudo button{
-      height: 35px;
-      width: 180px;
+  }
+
+  @media screen and (max-width: 786px){
+    #entregas .conteudo p{
+      font-size: 1.1em;
+      padding-top: 20px;
     }
   }
 
@@ -1002,10 +1005,6 @@
     }
     #entregas .conteudo-display-none p{
       font-size: 1.4em;
-    }
-    #entregas .conteudo-display-none button{
-      height: 35px;
-      width: 180px;
     }
   }
   
@@ -1037,11 +1036,6 @@
       padding-top: 40px;
       font-size: 1.1em;
     }
-    #entregas .conteudo-display-none button{
-      font-size: 1.1em;
-      height: 30px;
-      width: 166px;
-    }
   }
 
   @media screen and (max-width: 350px){
@@ -1057,10 +1051,9 @@
       padding-top: 30px;
       font-size: 1em;
     }
-    #entregas .conteudo-display-none button{
-      font-size: 1em;
-      height: 30px;
-      width: 140px;
+    #entregas .conteudo-display-none a{
+      font-size: 0.8em;
+      text-align: center;
     }
   }
 
@@ -1203,11 +1196,22 @@
       font-size: 1.1em;
       padding: 10px;
     }
+    .display-none a{
+        font-family: serif;
+        font-size: 1.1em;
+        border: 1px solid white;
+        text-decoration: none;
+        color: white;
+        margin-top: -1px;
+        height: 28px;
+        padding: 3px 8px;
+    }
   }
 
   @media screen and (max-width: 550px){
     .display-none .produto{
       width: 85%;
+      height: auto;
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -1227,6 +1231,17 @@
     .display-none .produto p{
       padding: 20px;
       text-align: center;
+    }
+    .display-none .saibaMais{
+      flex-direction: column;
+      row-gap: 0px;
+      align-items: center;
+    }
+    .display-none .saibaMais h3{
+      padding-left: 0px;
+    }
+    .display-none .saibaMais a{
+      width: 100px;
     }
   }
   
