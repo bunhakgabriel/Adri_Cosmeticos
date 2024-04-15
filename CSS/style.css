@@ -336,6 +336,33 @@ div.text h1{
     height: 100%;
 }
 
+/* linha cabeleleiros */
+
+#linhaCabeleleiros{
+    position: relative;
+    margin: 0 auto;
+    width: 1200px;
+    height: 350px;
+}
+
+#linhaCabeleleiros img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#linhaCabeleleiros a{
+    position: absolute;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.0);
+    background-color: rgb(234, 85, 184);
+    color: aliceblue;
+    border-radius: 10px;
+    left: 50%;
+    top: 85%;
+}
+
 /* bloco5 */
 
 #bloco5{
@@ -560,135 +587,10 @@ div.text h1{
     height: 100%;
 }
 
-
-/* bloco8 */
-
-#bloco8{
-    border: 0px solid black;
-    margin: 100px auto;
-    width: 1000px;
-}
-
-#bloco8 h2{
-    font-size: 2.5em;
-    font-family: serif;
-    font-weight: 100;
-    padding-left: 130px;
-} 
-
-#maisProdutos{
-    border: 0px solid red;
-    margin-top: 80px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    row-gap: 30px;
-}
-
-#maisProdutos div{
-    padding-top: 20px;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-    width: 21%;
-    height: 280px;
-}
-
-#maisProdutos div:hover{
-    cursor: pointer;
-}
-
-#maisProdutos div h4{
-    text-align: center;
-    font-family: serif;
-}
-
-#maisProdutos div img{
-    width: 100%;
-    height: 75%;
-}
-
-/* Bloco8 display-none */
-
-#bloco8 .display-none{
-    display: none;
-    width: 100%;
-    height: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: fixed;
-    background-color: rgba(150, 150, 150, .6);
-    backdrop-filter: blur(2px);
-}
-
-#bloco8 .display-none.active{
-    display: block;
-}
-
-.produto{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 450px;
-    display: flex;
-    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
-}
-
-.produto .conteudo{
-    color: white;
-    background-color: #2E2E2E;
-    padding-bottom: 20px;
-}
-
-.produto h1{
-    font-family: serif;
-    margin-top: 70px;
-    font-size: 1.6em;
-    padding-left: 20px;
-}
-
-.produto h3{
-    text-align: left;
-    margin-top: 0px;
-    font-size: 2em;
-    padding-left: 20px;
-    font-weight: 100;
-    display: inline-block;
-}
-
-.produto p{
-    font-family: serif;
-    padding: 20px;
-    font-size: 1.2em;
-}
-
-.display-none .saibaMais{
-    display: flex;
-    column-gap: 10%;
-}
-
-.display-none a{
-    display: block;
-    font-family: serif;
-    font-size: 1.2em;
-    border: 1px solid white;
-    text-decoration: none;
-    color: white;
-    margin-top: 3px;
-    height: 30px;
-    padding: 4px 10px;
-}
-
-.display-none a:hover{
-    cursor: pointer;
-    color: #848484;
-}
-
-
 /* Bloco9 */
 
 #bloco9{
+    margin-top: 100px;
     border: 0px solid red;
 }
 
@@ -699,7 +601,8 @@ div.text h1{
 }
 
 #rotas h1{
-    border: 1px solid re;
+    border: 0px solid red;
+    text-align: center;
     font-family: serif;
     font-weight: 100;
     font-size: 2.5em;

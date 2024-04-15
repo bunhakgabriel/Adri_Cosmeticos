@@ -138,12 +138,12 @@ header .mobile-menu-icon{
 */
 
 
-#cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+#cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros{
     margin: 100px auto;
     width: 1000px;
 }
 
-#cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+#cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2, #linhaCabeleleiros h2{
     margin: 40px 0px;
     font-size: 2.5em;
     font-family: serif;
@@ -167,6 +167,8 @@ header .mobile-menu-icon{
 
 .maisProdutos div:hover{
     cursor: pointer;
+    scale: 1.2;
+    transition: .6s;
 }
 
 .maisProdutos div h4{
@@ -182,7 +184,7 @@ header .mobile-menu-icon{
 /* produtos display-none */
 
 #cuidadosCabelos .display-none, #cuidadosPele .display-none, 
-#maquiagem .display-none, #perfumes .display-none{
+#maquiagem .display-none, #perfumes .display-none, #linhaCabeleleiros .display-none{
     display: none;
     width: 100%;
     height: 100%;
@@ -195,7 +197,7 @@ header .mobile-menu-icon{
 }
 
 #cuidadosCabelos .display-none.active, #cuidadosPele .display-none.active,
-#maquiagem .display-none.active, #perfumes .display-none.active{
+#maquiagem .display-none.active, #perfumes .display-none.active, #linhaCabeleleiros .display-none.active{
     display: block;
 }
 
@@ -211,6 +213,7 @@ header .mobile-menu-icon{
 }
 
 .produto .conteudo{
+    width: 100%;
     color: white;
     background-color: #2E2E2E;
     padding-bottom: 20px;

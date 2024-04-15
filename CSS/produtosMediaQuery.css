@@ -67,7 +67,7 @@
 
 
 @media screen and (max-width: 1100px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros{
         margin-top: 70px;
         width: 95vw;
     }
@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width: 860px){
-    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2, #linhaCabeleleiros h2{
         padding: 0;
         text-align: center;
         font-size: 2.3em;
@@ -113,11 +113,11 @@
 }
 
 @media screen and (max-width: 550px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros{
       width: 98vw;
       margin: 60px auto;
     }
-    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2{
+    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2, #linhaCabeleleiros h2{
       font-size: 2em;
     }
     .maisProdutos{
@@ -135,7 +135,7 @@
 }
 
 @media screen and (max-width: 440px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes{
+    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros{
       width: 97vw;
     }
     .maisProdutos{
