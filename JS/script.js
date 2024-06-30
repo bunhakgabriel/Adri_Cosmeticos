@@ -43,17 +43,21 @@ let init = setInterval( () =>{
 let divDisplayNone = document.getElementsByClassName('display-none')
 let produtos = document.getElementsByClassName('produtos')
 
-for(let c = 0; c < produtos.length; c++){
-    produtos[c].addEventListener('click', () => {
-        divDisplayNone[c].classList.add('active')
-    })
+renderizarIndividual = () => {
+    for(let c = 0; c < produtos.length; c++){
+        produtos[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.add('active')
+        })
+    }
+    
+    for(let c = 0; c < produtos.length; c++){
+        divDisplayNone[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.remove('active')
+        })
+    }
 }
 
-for(let c = 0; c < produtos.length; c++){
-    divDisplayNone[c].addEventListener('click', () => {
-        divDisplayNone[c].classList.remove('active')
-    })
-}
+setTimeout(renderizarIndividual, 2000)
 
 /* Função tipewriter */
 
@@ -85,7 +89,7 @@ const typewriterInit = () => {
     }
 }
 
-const interval = setInterval(typewriterInit, 100)
+//const interval = setInterval(typewriterInit, 100)
 
 /* Função scroll lateral imagens */
 
