@@ -13,9 +13,15 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-const array_db = new Array;
-const divMaisProdutos = document.getElementById('teste');
-const testeFirebase = document.getElementById('testeFirebase');
+
+const manicure = document.getElementById('manicurePedicure');
+const produtosManicure = document.querySelector('.produtosManicure');
+
+const salao = document.getElementById('salao');
+const produtosSalao = document.querySelector('.produtosSalao')
+
+const lash = document.getElementById('lash');
+const produtosLash = document.querySelector('.produtosLash');
 
 const criarDiv = () => {
     return document.createElement('div')
@@ -29,7 +35,7 @@ const criarLinkWpp = (produto) => {
     return link;
 }
 
-const renderizarDisplaynone = (array_db) => {
+const renderizarDisplaynone = (array_db, colecao) => {
     array_db.forEach(i => {
         const divDisplayNone = criarDiv();
         divDisplayNone.classList.add('display-none');
@@ -67,12 +73,20 @@ const renderizarDisplaynone = (array_db) => {
         divProdutoDisplayNone.appendChild(img);
         divProdutoDisplayNone.appendChild(divConteudo);
         divDisplayNone.appendChild(divProdutoDisplayNone);
-        testeFirebase.appendChild(divDisplayNone);
+        
+        if(colecao == 'manicurePedicure'){
+            manicure.appendChild(divDisplayNone);
+        } else if(colecao == 'salao'){
+            salao.appendChild(divDisplayNone);
+        } else if(colecao == 'lash'){
+            lash.appendChild(divDisplayNone);
+        }
 
     })
 }
 
-const renderizarProdutos = (array_db) => {
+const renderizarProdutos = (array_db, colecao) => {
+
     array_db.forEach(i => {
         const div = criarDiv();
         const img = document.createElement('img');
@@ -81,21 +95,40 @@ const renderizarProdutos = (array_db) => {
         
         img.setAttribute('src', i.url);
         h4.innerText = i.produto;
+
+        if(i.estoque < 1){
+            div.innerHTML = `<h5>Indisponivel no momento</h5>`
+            div.style.opacity = '0.3';
+        }
+
         div.appendChild(img);
         div.appendChild(h4);
-        divMaisProdutos.appendChild(div)
+
+        if(colecao == 'manicurePedicure'){
+            produtosManicure.appendChild(div);
+        } else if(colecao == 'salao'){
+            produtosSalao.appendChild(div);
+        } else if(colecao == 'lash'){
+            console.log(produtosLash)
+            produtosLash.appendChild(div);
+        }
     })
-    renderizarDisplaynone(array_db)
+    renderizarDisplaynone(array_db, colecao)
 }
 
 
 
 const buscarCollectionData = async () => {
-    const doc = await getDocs(collection(db, "manicurePedicure"));
-    doc.forEach(doc => {
-        array_db.push(doc.data())
+    const colecoes = ["manicurePedicure", "salao", "lash"]
+
+    colecoes.forEach(async (col) => {
+        const array_db = new Array;
+        const doc = await getDocs(collection(db, col));
+        doc.forEach(doc => {
+            array_db.push(doc.data())
+        })
+        renderizarProdutos(array_db, col);
     })
-    renderizarProdutos(array_db)
 };
 
 buscarCollectionData();
