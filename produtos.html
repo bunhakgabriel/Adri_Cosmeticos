@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="CSS/styleProdutos.css" />
     <link rel="stylesheet" href="CSS/produtosMediaQuery.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,11 +31,13 @@
   </head>
   <body>
     <div id="container">
+    <!--
       <div class="icons">
         <a href="https://contate.me/adrianacosmeticos" target="_blank">
           <i class="fa-brands fa-whatsapp fa-2xl wpp-link"></i>
         </a>
       </div>
+    -->
 
       <header>
         <h3>AdriCosméticos</h3>
@@ -756,9 +758,9 @@
     -->
 
       <section id="pesquisar" >
-        <label for="">Pesquisar produto:</label>
-        <input type="text" class="pesquisa" />
-        <button>Buscar</button>
+        <input type="text" class="pesquisa" id="pesquisa" placeholder="Oque deseja buscar?" />
+        <i id="btnBusca" class="fa-solid fa-magnifying-glass"></i>
+        <i id="btnVoltar" class="fa-solid fa-rotate-left"></i>
       </section>
 
       <section id="manicurePedicure">
@@ -798,11 +800,9 @@
           <div class="categorias">
             <h3>Categorias</h3>
             <ul>
-              <a href="produtos.html#cuidadosCabelos"><li>Cabelos</li></a>
-              <a href="produtos.html#cuidadosPele"><li>Pele</li></a>
-              <a href="produtos.html#maquiagem"><li>Maquiagem</li></a>
-              <a href="produtos.html#perfumes"><li>Perfumes</li></a>
-              <a href=""><li>Acessórios</li></a>
+                <a href="produtos.html#manicurePedicure"><li>Manicure e Pedicure</li></a>
+                <a href="produtos.html#salao"><li>Salão</li></a>
+                <a href="produtos.html#lash"><li>Lash Designer</li></a>
             </ul>
           </div>
 
@@ -834,5 +834,6 @@
     </div>
     <script type="module" src="JS/firestore.js"></script>
     <script src="JS/script.js"></script>
+    <script src="JS/busca.js"></script>
   </body>
 </html>

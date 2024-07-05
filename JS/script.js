@@ -1,5 +1,4 @@
 /* Função menu responsivo */
-
 const btn_menu = document.getElementById('btn-menu')
 const mobileMenu = document.querySelector('.mobile-menu')
 
@@ -14,8 +13,6 @@ btn_menu.addEventListener('click', e => {
 }) /* Fim função menu responsivo */
 
 /*Função carrosel de imagens */
-
-
 let cont = 1
 let margin_left = -8.3
 let img1 = document.querySelector('.img1')
@@ -36,10 +33,7 @@ let init = setInterval( () =>{
 
 },4000)
 
-
 /* Função vizualizar produtos individualmente */
-
-
 let divDisplayNone = document.getElementsByClassName('display-none')
 let produtos = document.getElementsByClassName('produtos')
 
@@ -58,9 +52,16 @@ renderizarIndividual = () => {
 }
 
 setTimeout(renderizarIndividual, 2000)
-
-
-
 /* Função scroll lateral imagens */
 
+/* Função mudar para pagina produtos */
 
+const btn_salao = document.getElementById('btn_salao');
+
+btn_salao.addEventListener('click', () => {
+    const params = new URLSearchParams();
+    params.append('sessao', 'salao')
+    const baseUrl = "http://127.0.0.1:5500/produtos.html?" + params.toString()
+    console.log(baseUrl)
+    window.location.href = baseUrl;
+})

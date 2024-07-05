@@ -109,7 +109,6 @@ const renderizarProdutos = (array_db, colecao) => {
         } else if(colecao == 'salao'){
             produtosSalao.appendChild(div);
         } else if(colecao == 'lash'){
-            console.log(produtosLash)
             produtosLash.appendChild(div);
         }
     })
@@ -133,4 +132,12 @@ const buscarCollectionData = async () => {
 
 buscarCollectionData();
 
+window.addEventListener('load', function() {
+    const url = new URL(this.window.location.href);
+    const param = new URLSearchParams(url.search);
+    const sessao = param.get('sessao');
 
+    this.setTimeout(() => {
+        document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
+    }, 1000)
+});

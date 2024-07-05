@@ -67,7 +67,11 @@
 
 
 @media screen and (max-width: 1100px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros, #testeFirebase{
+    body{
+      width: 99vw;
+    }
+
+    #manicurePedicure, #salao, #lash{
         margin-top: 70px;
         width: 95vw;
     }
@@ -81,72 +85,72 @@
 }
 
 @media screen and (max-width: 860px){
-    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2, #linhaCabeleleiros h2, #testeFirebase h2{
+    #manicurePedicure h2, #salao h2, #lash h2{
         padding: 0;
         text-align: center;
         font-size: 2.3em;
         margin-bottom: 0px;
     }
-    .maisProdutos, #teste{
+    .produtosManicure, .produtosSalao, .produtosLash{
         margin-top: 50px;
         justify-content: center;
         column-gap: 15px;
         row-gap: 15px;
     }
-    .maisProdutos div, #teste div{
+    .produtosManicure div, .produtosSalao div, .produtosLash div{
         width: 22%;
         height: 230px;
     }
-    .maisProdutos div h4, #teste div h4{
+    .produtosManicure div h4, .produtosSalao div h4, .produtosLash div h4{
         font-size: 0.9em;
     }
 }
 
 @media screen and (max-width: 720px){
-    .maisProdutos div, #teste div{
+    .produtosManicure div, .produtosSalao div, .produtosLash div{
       width: 31%;
       height: 250px;
     }
-    .maisProdutos div h4, #teste div h4{
+    .produtosManicure div h4, .produtosSalao div h4, .produtosLash div h4{
       font-size: 1em;
     }
 }
 
 @media screen and (max-width: 550px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros, #testeFirebase{
+    #manicurePedicure, #salao, #lash{
       width: 98vw;
       margin: 60px auto;
     }
-    #cuidadosCabelos h2, #cuidadosPele h2, #maquiagem h2, #perfumes h2, #linhaCabeleleiros h2, #testeFirebase h2{
+    #manicurePedicure h2, #salao h2, #lash h2{
       font-size: 2em;
     }
-    .maisProdutos{
+    .produtosManicure, .produtosSalao, .produtosLash{
       margin-top: 40px;
       column-gap: 5px;
       row-gap: 5px;
     }
-    .maisProdutos div{
+    .produtosManicure div, .produtosSalao div, .produtosLash div{
       width: 32%;
       height: 220px;
     }
-    .maisProdutos div h4{
+    .produtosManicure div h4, .produtosSalao div h4, .produtosLash div h4{
       font-size: 0.8em;
     }
 }
 
 @media screen and (max-width: 440px){
-    #cuidadosCabelos, #cuidadosPele, #maquiagem, #perfumes, #linhaCabeleleiros, #testeFirebase{
+    #manicurePedicure, #salao, #lash{
       width: 97vw;
     }
-    .maisProdutos, #teste{
+    .produtosManicure, .produtosSalao, .produtosLash{
       column-gap: 5px;
       row-gap: 5px;
     }
-    .maisProdutos div, #teste div{
+    .produtosManicure div, .produtosSalao div, .produtosLash div{
       width: 32%;
       height: 180px;
     }
-    .maisProdutos div h4, #teste div h4{
+    .produtosManicure div h4, .produtosSalao div h4, .produtosLash div h4{
       font-size: 0.7em;
       font-family: sans-serif;
     }

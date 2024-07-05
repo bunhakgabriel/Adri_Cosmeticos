@@ -11,6 +11,7 @@ html{
 body{
     font-family: sans-serif;
     background-color: #F8E0E6;
+    overflow-x: hidden;
 }
 
 header{
@@ -140,11 +141,32 @@ header .mobile-menu-icon{
 #pesquisar{
     width: 1000px;
     margin: 60px auto 30px auto;
+    border: 0px solid black;
+    display: flex;
 }
 
 #pesquisar label{
     font-size: 1.4em;
     padding-left: 20px;
+}
+
+input#pesquisa{
+    width: 350px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    margin-left: 20px;
+    padding: 10px;
+} 
+
+#btnBusca, #btnVoltar{
+    padding-top: 3px;
+    border: 0px solid red;
+    margin: 4px;
+    font-size: 1.5em;
+}
+
+#btnBusca:hover, #btnVoltar:hover{
+    cursor: pointer;
 }
 
 #manicurePedicure{
