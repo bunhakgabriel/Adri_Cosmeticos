@@ -51,17 +51,31 @@ renderizarIndividual = () => {
     }
 }
 
-setTimeout(renderizarIndividual, 2000)
+setTimeout(renderizarIndividual, 1500)
 /* Função scroll lateral imagens */
 
 /* Função mudar para pagina produtos */
 
 const btn_salao = document.getElementById('btn_salao');
+const btn_lash = document.getElementById('btn_lash')
+const btn_categorias = document.querySelectorAll('.btn_categorias')
 
-btn_salao.addEventListener('click', () => {
+const reloadPage = (coletion) => {
     const params = new URLSearchParams();
-    params.append('sessao', 'salao')
+    params.append('sessao', coletion)
     const baseUrl = "http://127.0.0.1:5500/produtos.html?" + params.toString()
     console.log(baseUrl)
     window.location.href = baseUrl;
-})
+}
+
+btn_categorias.forEach( button => {
+    button.addEventListener('click', e => {
+        let data = e.target.getAttribute('data-value')
+        if(data == 'lash'){
+            reloadPage('lash')
+        } else {
+            reloadPage('salao')
+        }
+    })
+} )
+

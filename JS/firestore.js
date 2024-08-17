@@ -49,8 +49,13 @@ const renderizarDisplaynone = (array_db, colecao) => {
         const divConteudo = criarDiv();
         divConteudo.classList.add('conteudo');
 
+        const pCod = document.createElement('p');
+        pCod.innerText = 'Código: ' + i.codigo;
+        pCod.style.margin = '0px';
+
         const h1 = document.createElement('h1');
         h1.innerText = i.produto;
+        h1.style.margin = '0px'
 
         const p = document.createElement('p');
         p.innerText = i.descricao;
@@ -67,6 +72,7 @@ const renderizarDisplaynone = (array_db, colecao) => {
 
         divSaibaMais.appendChild(h3);
         divSaibaMais.appendChild(a);
+        divConteudo.appendChild(pCod);
         divConteudo.appendChild(h1);
         divConteudo.appendChild(p);
         divConteudo.appendChild(divSaibaMais);
@@ -88,6 +94,7 @@ const renderizarDisplaynone = (array_db, colecao) => {
 const renderizarProdutos = (array_db, colecao) => {
 
     array_db.forEach(i => {
+        console.log(i.codigo)
         const div = criarDiv();
         const img = document.createElement('img');
         const h4 = document.createElement('h4');
