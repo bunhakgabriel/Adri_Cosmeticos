@@ -238,6 +238,7 @@ div.text h1{
     border: 0px solid black;
     justify-content: center;
     column-gap: 40px;
+    margin: 120px 0px 140px 0px;
 }
 .linhaProfissional{
     border: 0px solid red;
