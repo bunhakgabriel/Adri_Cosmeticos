@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #linhasProfissionais1{
+            display: flex;
+            border: 0px solid black;
+            justify-content: center;
+            column-gap: 40px;
+        }
+        .linhaProfissional{
+            border: 0px solid red;
+            width: 350px;
+            height: 380px;
+        }
+        .linhaProfissional h1{
+            border: 0px solid red;
+            height: 55px;
+        }
+        .imgLinhasProfissionais{
+            border: 0px solid black;
+            position: relative;
+            width: 350px;
+            height: 280px;
+        }
+        .imgLinhasProfissionais button{
+            text-decoration: none;
+            border: 1px solid gray;
+            background-color: rgba(0, 0, 0, 0.0);
+            font-size: 1.4em;
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+        }
+        .imgLinhasProfissionais button a{
+            text-decoration: none;
+            color: gray;
+            font-size: 1em;
+        }
+        .imgLinhasProfissionais .img1{
+            position: absolute;
+            z-index: 1;
+            width: 130px;
+            height: 110px;
+            bottom: 50px;
+            left: 100px;
+        }
+        .imgLinhasProfissionais .img2{
+            position: absolute;
+            z-index: 0;
+            right: 0;
+            width: 180px;
+            height: 280px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section id="linhasProfissionais1" >
+    
+        <div class="linhaProfissional">
+            <h1>Linha profissional manicure e pedicure</h1>
+            <div class="imgLinhasProfissionais" >
+                <img class="img1" src="https://www.dicasdemulher.com.br/wp-content/uploads/2021/06/esmalte-preto-fosco-2.jpg" alt="">
+                <img class="img2" src="img/manicure&pedicure.jpg" alt="">
+                <button><a href="">Ver Mais</a></button>
+            </div>
+        </div>
+
+        <div class="linhaProfissional">
+            <h1>Conheça nossa linha profissional para Salão</h1>
+            <div class="imgLinhasProfissionais" >
+                <img class="img1" src="https://img.freepik.com/fotos-premium/close-up-das-maos-do-cabeleireiro-lavando-o-cabelo-da-mulher-na-pia-do-salao-de-beleza_141172-4559.jpg" alt="">
+                <img class="img2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyZjsGATSVwbvpgr2VbRyQGzEhu8zYNeH3cfZKoCXrd9oUgzc2wv5qNtXerRHXpJIkY08&usqp=CAU" alt="">
+                <button><a href="">Ver Mais</a></button>
+            </div>
+        </div>
+
+        <div class="linhaProfissional">
+            <h1>Linha lash designer</h1>
+            <div class="imgLinhasProfissionais" >
+                <img class="img1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZyCG-lGGheHseYPFG4ZKIKiD4hfkZz_51Eg&s" alt="">
+                <img class="img2" src="https://i.pinimg.com/736x/b5/a6/36/b5a636a4a8dac308bc1c683d18d46dee.jpg" alt="">
+                <button><a href="">Ver Mais</a></button>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
