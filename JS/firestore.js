@@ -1,7 +1,7 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js';
 import { getFirestore, getDocs, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js';
-      
+
 const firebaseConfig = {
     apiKey: "AIzaSyCg3ZIpBl2jxW-McpRXKoD1vN51T_pxmsc",
     authDomain: "adricosmeticos-88d41.firebaseapp.com",
@@ -79,12 +79,12 @@ const renderizarDisplaynone = (array_db, colecao) => {
         divProdutoDisplayNone.appendChild(img);
         divProdutoDisplayNone.appendChild(divConteudo);
         divDisplayNone.appendChild(divProdutoDisplayNone);
-        
-        if(colecao == 'manicurePedicure'){
+
+        if (colecao == 'manicurePedicure') {
             manicure.appendChild(divDisplayNone);
-        } else if(colecao == 'salao'){
+        } else if (colecao == 'salao') {
             salao.appendChild(divDisplayNone);
-        } else if(colecao == 'lash'){
+        } else if (colecao == 'lash') {
             lash.appendChild(divDisplayNone);
         }
 
@@ -94,16 +94,15 @@ const renderizarDisplaynone = (array_db, colecao) => {
 const renderizarProdutos = (array_db, colecao) => {
 
     array_db.forEach(i => {
-        console.log(i.codigo)
         const div = criarDiv();
         const img = document.createElement('img');
         const h4 = document.createElement('h4');
         div.classList.add('produtos');
-        
+
         img.setAttribute('src', i.url);
         h4.innerText = i.produto;
 
-        if(i.estoque < 1){
+        if (i.estoque < 1) {
             div.innerHTML = `<h5>Indisponivel no momento</h5>`
             div.style.opacity = '0.3';
         }
@@ -111,11 +110,11 @@ const renderizarProdutos = (array_db, colecao) => {
         div.appendChild(img);
         div.appendChild(h4);
 
-        if(colecao == 'manicurePedicure'){
+        if (colecao == 'manicurePedicure') {
             produtosManicure.appendChild(div);
-        } else if(colecao == 'salao'){
+        } else if (colecao == 'salao') {
             produtosSalao.appendChild(div);
-        } else if(colecao == 'lash'){
+        } else if (colecao == 'lash') {
             produtosLash.appendChild(div);
         }
     })
@@ -139,11 +138,35 @@ const buscarCollectionData = async () => {
 
 buscarCollectionData();
 
-window.addEventListener('load', function() {
+const abrirProdutoIndividual = (codigo) => {
+    setTimeout(() => {
+        // let divDisplayNone = document.getElementsByClassName('display-none')
+        // let produtos = document.querySelectorAll('.produtos')
+        // // for(let c = 0; c < produtos.length; c++){
+        // //     if(produtos[c].innerText === codigo){
+        // //         divDisplayNone[c].classList.add('active')
+        // //     }
+        // // }
+        const inputPesquisa = document.getElementById('pesquisa');
+        inputPesquisa.value = codigo;
+        const produtos = document.querySelectorAll('.produtos');
+        produtos.forEach(item => {
+            const h4 = item.querySelector('h4').innerText.toLowerCase();
+            item.style.display = (true && !h4.includes(inputPesquisa.value.toLowerCase())) ? 'none' : 'block';
+        })
+    }, 1200)
+}
+
+window.addEventListener('load', function () {
     const url = new URL(this.window.location.href);
     const param = new URLSearchParams(url.search);
     const sessao = param.get('sessao');
+    if (param.get('codigo')) {
+        abrirProdutoIndividual(param.get('codigo'));
+    }
 
+
+    if (!sessao) return
     this.setTimeout(() => {
         document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
     }, 1000)

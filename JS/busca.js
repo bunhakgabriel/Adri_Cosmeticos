@@ -11,24 +11,6 @@ const busca = (text, operacao) => {
     })
 
     if(operacao == 'resetar') text.value = '';
-
-    /*
-    if(operacao == 'filtrar'){
-        produtos.forEach(item => {
-            const h4 = item.querySelector('h4').innerText.toLowerCase()
-            if(!h4.includes(text)){
-                item.style.display = 'none';
-            } else {
-                item.style.display = 'block';
-            }
-        })
-    } else if(operacao == 'resetar'){
-        produtos.forEach(item => {
-            item.style.display = 'block';
-        })
-        text.value = '';
-    }
-    */
 }
 
 btn_busca.addEventListener('click', () => {
@@ -36,7 +18,9 @@ btn_busca.addEventListener('click', () => {
 });
 
 btn_voltar.addEventListener('click', () => {
-    busca(inputPesquisa, 'resetar')
+    busca(inputPesquisa, 'resetar');
 })
 
-
+document.querySelector('.pesquisa').addEventListener('keydown', () => {
+    busca(inputPesquisa, 'filtrar');
+})

@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="CSS/styleProdutos.css" />
-    <link rel="stylesheet" href="CSS/produtosMediaQuery.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link rel="shortcut icon" href="Ico/icon.ico" type="image/x-icon" />
-    <title>AdriCosméticos</title>
-  </head>
-  <body>
-    <div id="container">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" href="CSS/styleProdutos.css" />
+  <link rel="stylesheet" href="CSS/produtosMediaQuery.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo:wght@200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="Ico/icon.ico" type="image/x-icon" />
+  <title>AdriCosméticos</title>
+
+  <style>
+    #loading-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(10px);
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #loader {
+      border: 12.5px solid blue;
+      border-top: 12.5px solid black;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="loading-overlay">
+      <div id="loader"></div>
+    </div>
     <!--
       <div class="icons">
         <a href="https://contate.me/adrianacosmeticos" target="_blank">
@@ -39,123 +66,130 @@
       </div>
     -->
 
-      <header>
-        <h3>AdriCosméticos</h3>
+    <header>
+      <h3>AdriCosméticos</h3>
 
-        <ul>
-          <a href="index.html">
-            <li>Home</li>
-          </a>
-          <a href="produtos.html">
-            <li class="atual">Produtos</li>
-          </a>
-          <a href="index.html#bloco9">
-            <li>Como Chegar</li>
-          </a>
-          <a href="index.html#footer">
-            <li class="fale-conosco">Fale conosco</li>
-          </a>
-        </ul>
+      <ul>
+        <a href="index.html">
+          <li>Home</li>
+        </a>
+        <a href="produtos.html">
+          <li class="atual">Produtos</li>
+        </a>
+        <a href="index.html#bloco9">
+          <li>Como Chegar</li>
+        </a>
+        <a href="index.html#footer">
+          <li class="fale-conosco">Fale conosco</li>
+        </a>
+      </ul>
 
-        <div class="mobile-menu-icon">
-          <button id="btn-menu"><i class="fa-solid fa-bars fa-2xl"></i></button>
+      <div class="mobile-menu-icon">
+        <button id="btn-menu"><i class="fa-solid fa-bars fa-2xl"></i></button>
+      </div>
+    </header>
+
+    <div class="mobile-menu">
+      <ul>
+        <a href="index.html">
+          <li class="atual">Home</li>
+        </a>
+        <a href="produtos.html">
+          <li>Produtos</li>
+        </a>
+        <a href="index.html#bloco9">
+          <li>Como Chegar</li>
+        </a>
+        <a href="index.html#footer">
+          <li class="fale-conosco">Fale conosco</li>
+        </a>
+      </ul>
+    </div>
+
+    <section id="pesquisar">
+      <input type="text" class="pesquisa" id="pesquisa" placeholder="Oque deseja buscar?" />
+      <i id="btnBusca" class="fa-solid fa-magnifying-glass"></i>
+      <i id="btnVoltar" class="fa-solid fa-rotate-left"></i>
+    </section>
+
+    <section id="manicurePedicure">
+      <h2>Linha profissional manicure e pedicure</h2>
+
+      <div class="produtosManicure"></div>
+    </section>
+
+    <section id="salao">
+      <h2>Linha profissional salão</h2>
+
+      <div class="produtosSalao"></div>
+    </section>
+
+    <section id="lash">
+      <h2>Lash Designer</h2>
+
+      <div class="produtosLash"></div>
+    </section>
+
+    <footer>
+      <h1>AdriCosméticos</h1>
+
+      <div class="flex-bloco8">
+        <div class="sobre">
+          <h3>Sobre a Loja</h3>
+          <p>
+            A AdriCosméticos foi inaugurada no ano de 2023, somos um loja de
+            cosmésticos física, trabalhamos com produtos profissionais para os
+            cabelos, pele, maquiagem, e finalizadores das marcas mais
+            conceituadas do mercado. Nossa Loja atende desde profissionais da
+            área, como consumidores finais, com uma boa aparência você pode
+            ser quem você quiser.
+          </p>
         </div>
-      </header>
 
-      <div class="mobile-menu">
-        <ul>
-          <a href="index.html">
-            <li class="atual">Home</li>
-          </a>
-          <a href="produtos.html">
-            <li>Produtos</li>
-          </a>
-          <a href="index.html#bloco9">
-            <li>Como Chegar</li>
-          </a>
-          <a href="index.html#footer">
-            <li class="fale-conosco">Fale conosco</li>
-          </a>
-        </ul>
+        <div class="categorias">
+          <h3>Categorias</h3>
+          <ul>
+            <a href="produtos.html#manicurePedicure">
+              <li>Manicure e Pedicure</li>
+            </a>
+            <a href="produtos.html#salao">
+              <li>Salão</li>
+            </a>
+            <a href="produtos.html#lash">
+              <li>Lash Designer</li>
+            </a>
+          </ul>
+        </div>
+
+        <div class="faleConosco">
+          <h3>Fale Conosco</h3>
+          <ul>
+            <li>Rua Tijucas do Sul, 247 Loja 1, Curitiba - PR - 81900-080</li>
+            <li>Celular: (41) 99698-3316</li>
+            <li>WhatsApp: (41) 99698-3316</li>
+            <li>E-mail: adricosmeticos@gmail.com</li>
+          </ul>
+        </div>
       </div>
 
-      <section id="pesquisar" >
-        <input type="text" class="pesquisa" id="pesquisa" placeholder="Oque deseja buscar?" />
-        <i id="btnBusca" class="fa-solid fa-magnifying-glass"></i>
-        <i id="btnVoltar" class="fa-solid fa-rotate-left"></i>
-      </section>
+      <div class="icones">
+        <a href="https://contate.me/adrianacosmeticos">
+          <i class="fa-brands fa-whatsapp fa-2xl"></i>
+        </a>
+        <a href="https://www.instagram.com/adricosmeticoscuritiba/">
+          <i class="fa-brands fa-instagram fa-2xl"></i>
+        </a>
+        <a href="https://www.facebook.com/adri.cosmeticos.2023">
+          <i class="fa-brands fa-facebook fa-2xl"></i>
+        </a>
+      </div>
 
-      <section id="manicurePedicure">
-        <h2>Linha profissional manicure e pedicure</h2>
+      <p>2023 Copyright - AdriCosméticos</p>
+    </footer>
+  </div>
+  <script type="module" src="JS/firestore.js"></script>
+  <script src="JS/script.js"></script>
+  <script src="JS/busca.js"></script>
+</body>
 
-        <div class="produtosManicure"></div>
-      </section>
-
-      <section id="salao">
-        <h2>Linha profissional salão</h2>
-
-        <div class="produtosSalao"></div>
-      </section>
-
-      <section id="lash">
-        <h2>Lash Designer</h2>
-
-        <div class="produtosLash"></div>
-      </section>
-
-      <footer>
-        <h1>AdriCosméticos</h1>
-
-        <div class="flex-bloco8">
-          <div class="sobre">
-            <h3>Sobre a Loja</h3>
-            <p>
-              A AdriCosméticos foi inaugurada no ano de 2023, somos um loja de
-              cosmésticos física, trabalhamos com produtos profissionais para os
-              cabelos, pele, maquiagem, e finalizadores das marcas mais
-              conceituadas do mercado. Nossa Loja atende desde profissionais da
-              área, como consumidores finais, com uma boa aparência você pode
-              ser quem você quiser.
-            </p>
-          </div>
-
-          <div class="categorias">
-            <h3>Categorias</h3>
-            <ul>
-                <a href="produtos.html#manicurePedicure"><li>Manicure e Pedicure</li></a>
-                <a href="produtos.html#salao"><li>Salão</li></a>
-                <a href="produtos.html#lash"><li>Lash Designer</li></a>
-            </ul>
-          </div>
-
-          <div class="faleConosco">
-            <h3>Fale Conosco</h3>
-            <ul>
-              <li>Rua Tijucas do Sul, 247 Loja 1, Curitiba - PR - 81900-080</li>
-              <li>Celular: (41) 99698-3316</li>
-              <li>WhatsApp: (41) 99698-3316</li>
-              <li>E-mail: adricosmeticos@gmail.com</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="icones">
-          <a href="https://contate.me/adrianacosmeticos">
-            <i class="fa-brands fa-whatsapp fa-2xl"></i>
-          </a>
-          <a href="https://www.instagram.com/adricosmeticoscuritiba/">
-            <i class="fa-brands fa-instagram fa-2xl"></i>
-          </a>
-          <a href="https://www.facebook.com/adri.cosmeticos.2023">
-            <i class="fa-brands fa-facebook fa-2xl"></i>
-          </a>
-        </div>
-
-        <p>2023 Copyright - AdriCosméticos</p>
-      </footer>
-    </div>
-    <script type="module" src="JS/firestore.js"></script>
-    <script src="JS/script.js"></script>
-    <script src="JS/busca.js"></script>
-  </body>
 </html>

@@ -31,7 +31,7 @@ let init = setInterval( () =>{
     cont++
     if(cont == 10){cont = 0}            
 
-},4000)
+},10000000000)
 
 /* Função vizualizar produtos individualmente */
 let divDisplayNone = document.getElementsByClassName('display-none')
@@ -50,9 +50,24 @@ renderizarIndividual = () => {
         })
     }
 }
-
 setTimeout(renderizarIndividual, 1500)
 /* Função scroll lateral imagens */
+
+/* Função vizualizar um produto individualmente a partir do carrossel de imagens */
+const reloadPageProduto = (data) => {
+    const params = new URLSearchParams();
+    params.append('codigo', data)
+    const baseUrl = "http://127.0.0.1:5500/produtos.html?" + params.toString()
+    window.location.href = baseUrl;
+}
+
+const btn_carrossel_produtos = document.querySelectorAll('.link_carrossel_produtos');
+btn_carrossel_produtos.forEach(btn => {
+    btn.addEventListener('click', e => {
+        let data = e.target.getAttribute('data-value');
+        reloadPageProduto(data);
+    })
+});
 
 /* Função mudar para pagina produtos */
 
@@ -71,11 +86,7 @@ const reloadPage = (coletion) => {
 btn_categorias.forEach( button => {
     button.addEventListener('click', e => {
         let data = e.target.getAttribute('data-value')
-        if(data == 'lash'){
-            reloadPage('lash')
-        } else {
-            reloadPage('salao')
-        }
+        reloadPage(data);
     })
 } )
 
