@@ -23,8 +23,17 @@ const produtosSalao = document.querySelector('.produtosSalao')
 const lash = document.getElementById('lash');
 const produtosLash = document.querySelector('.produtosLash');
 
+
+
 const criarDiv = () => {
     return document.createElement('div')
+}
+
+const displayNoneLoader = () => {
+    setTimeout(() => {
+        document.getElementById("loader").style.display = 'none'
+        document.getElementById("loading-overlay").style.display = 'none'
+    }, 1200)
 }
 
 const criarLinkWpp = (produto) => {
@@ -89,6 +98,9 @@ const renderizarDisplaynone = (array_db, colecao) => {
         }
 
     })
+    if(param.size === 0 && !sessao){  
+        displayNoneLoader()
+    }
 }
 
 const renderizarProdutos = (array_db, colecao) => {
@@ -135,11 +147,7 @@ const buscarCollectionData = async () => {
         renderizarProdutos(array_db, col);
     })
 };
-
-buscarCollectionData();
-
-const abrirProdutoIndividual = (codigo) => {
-    setTimeout(() => {
+const abrirProdutoIndividual = async (codigo) => {
         // let divDisplayNone = document.getElementsByClassName('display-none')
         // let produtos = document.querySelectorAll('.produtos')
         // // for(let c = 0; c < produtos.length; c++){
@@ -150,24 +158,28 @@ const abrirProdutoIndividual = (codigo) => {
         const inputPesquisa = document.getElementById('pesquisa');
         inputPesquisa.value = codigo;
         const produtos = document.querySelectorAll('.produtos');
-        produtos.forEach(item => {
+        await produtos.forEach(item => {
             const h4 = item.querySelector('h4').innerText.toLowerCase();
             item.style.display = (true && !h4.includes(inputPesquisa.value.toLowerCase())) ? 'none' : 'block';
         })
-    }, 1200)
 }
 
+let param;
+let sessao;
 window.addEventListener('load', function () {
     const url = new URL(this.window.location.href);
-    const param = new URLSearchParams(url.search);
-    const sessao = param.get('sessao');
-    if (param.get('codigo')) {
-        abrirProdutoIndividual(param.get('codigo'));
-    }
+    param = new URLSearchParams(url.search);
+    sessao = param.get('sessao');
+    const nameProduto = param.get('codigo')
+    buscarCollectionData()
 
-
-    if (!sessao) return
     this.setTimeout(() => {
+       if(sessao){
         document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
-    }, 1000)
+        return displayNoneLoader();
+    } else if(nameProduto){
+        abrirProdutoIndividual(nameProduto)
+        return displayNoneLoader()
+    }
+    }, 1500)
 });
