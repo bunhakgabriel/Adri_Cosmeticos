@@ -148,20 +148,13 @@ const buscarCollectionData = async () => {
     })
 };
 const abrirProdutoIndividual = async (codigo) => {
-        // let divDisplayNone = document.getElementsByClassName('display-none')
-        // let produtos = document.querySelectorAll('.produtos')
-        // // for(let c = 0; c < produtos.length; c++){
-        // //     if(produtos[c].innerText === codigo){
-        // //         divDisplayNone[c].classList.add('active')
-        // //     }
-        // // }
-        const inputPesquisa = document.getElementById('pesquisa');
-        inputPesquisa.value = codigo;
-        const produtos = document.querySelectorAll('.produtos');
-        await produtos.forEach(item => {
-            const h4 = item.querySelector('h4').innerText.toLowerCase();
-            item.style.display = (true && !h4.includes(inputPesquisa.value.toLowerCase())) ? 'none' : 'block';
-        })
+        let divDisplayNone = document.getElementsByClassName('display-none')
+        let produtos = document.querySelectorAll('.produtos')
+        for(let c = 0; c < produtos.length; c++){
+            if(produtos[c].innerText === codigo){
+                divDisplayNone[c].classList.add('active')
+            }
+        }
 }
 
 let param;
