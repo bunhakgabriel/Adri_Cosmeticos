@@ -36,6 +36,23 @@ header ul{
     font-size: 1.2em;
 }
 
+header {
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    height: 170px;
+    position: fixed;
+    position: static;
+    display: flex;
+    background-color: #F7819F;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/adesivo3.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
 header ul a{
     text-decoration: none;
     color: white;
@@ -44,7 +61,7 @@ header ul a{
 
 header ul li{
     padding: 10px 20px;
-    border: 1px solid #F7819F;
+    border: 0px solid #F7819F;
 }
 
 header ul li:hover{
@@ -120,7 +137,7 @@ header .mobile-menu-icon{
   }
   
   .mobile-menu ul li{
-    border-bottom: 1px solid white ;
+    border-bottom: 0px solid white ;
     padding: 15px 5px;
   }
   
@@ -140,7 +157,7 @@ header .mobile-menu-icon{
 
 #pesquisar{
     width: 1000px;
-    margin: 60px auto 30px auto;
+    margin: 30px auto 30px auto;
     border: 0px solid black;
     display: flex;
 }

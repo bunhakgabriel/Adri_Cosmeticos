@@ -1,23 +1,21 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: sans-serif;
     background-color: #F8E0E6;
 }
 
-div#container{
+div#container {}
 
-}
-
-div.icons a{
+div.icons a {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -26,7 +24,7 @@ div.icons a{
     right: 20px;
 }
 
-div.icons .wpp-link{
+div.icons .wpp-link {
     background-color: #25d366;
     width: 70px;
     height: 65px;
@@ -38,77 +36,75 @@ div.icons .wpp-link{
     z-index: 1000;
 }
 
-header{
-    z-index: 1;
+header {
+    z-index: 10;
     top: 0px;
     width: 100%;
+    height: 170px;
     position: fixed;
     position: static;
     display: flex;
     background-color: #F7819F;
-    justify-content: space-between;
+    justify-content: center;
+    background-image: url('../img/adesivo3.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-header h3{
-    color: white;
-    margin: 0;
-    padding: 15px 30px;
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.7em;
-}
-
-header ul{
+header ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
     font-size: 1.2em;
 }
 
-header ul a{
+header ul a {
     text-decoration: none;
     color: white;
 
 }
 
-header ul li.atual{
+header ul li.atual {
     border: 1px solid white;
 }
 
-header ul li{
+header ul li {
     padding: 10px 20px;
-    border: 1px solid #F7819F;
+    border: 0px solid #F7819F;
 }
 
-header ul li:hover{
+header ul li:hover {
     border: 1px solid white;
     transition: 0.5s;
 }
 
-header ul li.atual{
+header ul li.atual {
     border: 1px solid white;
 }
 
 /* Menu responsivo */
 
-header .mobile-menu-icon{
+header .mobile-menu-icon {
     padding: 20px 15px;
     display: none;
     border: 0px solid red;
-  }
-  
-  header .mobile-menu-icon button{
+}
+
+header .mobile-menu-icon button {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px;
     border: 0px;
-  }
-  
-  header .mobile-menu-icon i{
+}
+
+header .mobile-menu-icon i {
     color: white;
     font-size: 35px;
-  }
-  
-  .mobile-menu{
+}
+
+.mobile-menu {
     position: fixed;
     position: static;
     width: 100%;
@@ -116,67 +112,67 @@ header .mobile-menu-icon{
     padding: 10px;
     border-top: 1px solid white;
     background-color: #F7819F;
-  }
-  
-  .mobile-menu a{
+}
+
+.mobile-menu a {
     font-family: sans-serif;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-  }
-  
-  .mobile-menu ul{
+}
+
+.mobile-menu ul {
     padding: 0px;
     text-align: center;
     list-style: none;
-  }
-  
-  .mobile-menu ul li{
-    border-bottom: 1px solid white ;
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid white;
     padding: 15px 5px;
-  }
-  
-  .active{
+}
+
+.active {
     display: block;
-  }
+}
 
 /* Fim menu responsivo */
 
-#bloco1{
+#bloco1 {
     border: 0px solid red;
-    margin: 80px auto 0px auto;
+    margin: 40px auto 0px auto;
     display: flex;
     justify-content: center;
     height: 500px;
     width: 1300px;
 }
 
-#bloco1 div.text{
+#bloco1 div.text {
     border: 0px solid red;
     width: 40%;
 }
 
-div.text h1{
+div.text h1 {
     font-weight: 100;
     font-size: 2.9em;
     font-family: serif;
     /*font-family: 'Cormorant Garamond', serif;*/
 }
 
-#bloco1 div.img{
+#bloco1 div.img {
     border: 0px solid red;
     width: 40%;
     height: 400px;
 }
 
-#bloco1 div img{
+#bloco1 div img {
     width: 100%;
     height: 100%;
 }
 
 /* #bloco2 - carrossel */
 
-#bloco2{
+#bloco2 {
     border: 0px solid red;
     top: 360px;
     left: 10%;
@@ -187,77 +183,81 @@ div.text h1{
     height: 200px;
 }
 
-.slides{
+.slides {
     display: flex;
     width: 400%;
     height: 100%;
     column-gap: 2px;
 }
 
-.slide{
+.slide {
     width: 8.3%;
     transition: 1s;
 }
 
-.slide img{
+.slide img {
     width: 100%;
     height: 100%;
 }
 
 /* Marcas */
-#marcas{
+#marcas {
     border: 0px solid red;
     margin: 40px auto;
     padding: 10px;
     width: 1300px;
 }
 
-#marcas .logoMarcas{
-   display: flex;
-   justify-content: space-between;
-   width: 1050px;
-   flex-wrap: wrap;
-   row-gap: 20px;
-   margin: 0px auto;
+#marcas .logoMarcas {
+    display: flex;
+    justify-content: space-between;
+    width: 1050px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    margin: 0px auto;
 }
 
-.logoMarcas div{
-   border: 0px solid black;
-   width: 190px;
-   height: 150px;
+.logoMarcas div {
+    border: 0px solid black;
+    width: 190px;
+    height: 150px;
 }
 
-.logoMarcas div img{
+.logoMarcas div img {
     width: 100%;
     height: 100%;
 }
 
 /*******************************************************************/
-#linhasProfissionais{
+#linhasProfissionais {
     display: flex;
     border: 0px solid black;
     justify-content: center;
     column-gap: 40px;
     margin: 120px 0px 140px 0px;
 }
-.linhaProfissional{
+
+.linhaProfissional {
     border: 0px solid red;
     width: 350px;
     height: 380px;
 }
-.linhaProfissional h1{
+
+.linhaProfissional h1 {
     font-family: serif;
     margin: 20px;
     border: 0px solid red;
     height: 55px;
 }
-.imgLinhasProfissionais{
+
+.imgLinhasProfissionais {
     border: 0px solid black;
     position: relative;
     width: 350px;
     height: 280px;
 }
-.imgLinhasProfissionais button{
+
+.imgLinhasProfissionais button {
     text-decoration: none;
     border: 1px solid gray;
     background-color: rgba(0, 0, 0, 0.0);
@@ -266,12 +266,14 @@ div.text h1{
     bottom: 0;
     left: 10px;
 }
-.imgLinhasProfissionais button a{
+
+.imgLinhasProfissionais button a {
     text-decoration: none;
     color: gray;
     font-size: 1em;
 }
-.imgLinhasProfissionais .img1{
+
+.imgLinhasProfissionais .img1 {
     position: absolute;
     z-index: 1;
     width: 130px;
@@ -279,24 +281,26 @@ div.text h1{
     bottom: 50px;
     left: 100px;
 }
-.imgLinhasProfissionais .img2{
+
+.imgLinhasProfissionais .img2 {
     position: absolute;
     z-index: 0;
     right: 0;
     width: 180px;
     height: 280px;
 }
+
 /*******************************************************************/
 
 /* Entregas */
 
-#entregas{
+#entregas {
     width: 1200px;
     margin: 0px auto;
     border: 0px solid red;
 }
 
-#entregas section{
+#entregas section {
     margin: 0 auto;
     width: 1000px;
     border: 0px solid red;
@@ -305,25 +309,25 @@ div.text h1{
     column-gap: 70px;
 }
 
-#entregas .conteudo{
+#entregas .conteudo {
     width: 40%;
 }
 
-#entregas .conteudo-display-none{
+#entregas .conteudo-display-none {
     display: none;
     width: 40%;
     border: 0px solid black;
 }
 
 #entregas .conteudo p,
-#entregas .conteudo-display-none p{
+#entregas .conteudo-display-none p {
     font-size: 1.3em;
     padding-top: 60px;
     text-align: center;
 }
 
 #entregas .conteudo a,
-#entregas .conteudo-display-none a{
+#entregas .conteudo-display-none a {
     margin: 15px auto;
     border: 1px solid black;
     display: block;
@@ -335,37 +339,37 @@ div.text h1{
 }
 
 #entregas .conteudo a:hover,
-#entregas .conteudo-display-none a:hover{
+#entregas .conteudo-display-none a:hover {
     color: #848484;
     border: 1px solid #848484;
     transition: 0.2s;
 }
 
-#entregas .img{
+#entregas .img {
     width: 40%;
     height: 300px;
     border: 0px solid black;
 }
 
-#entregas .img img{
+#entregas .img img {
     width: 100%;
     height: 100%;
 }
 
 /* Bloco9 */
 
-#bloco9{
+#bloco9 {
     margin-top: 100px;
     border: 0px solid red;
 }
 
-#bloco9 #rotas{
+#bloco9 #rotas {
     border: 0px solid black;
     margin: 20px auto 50px auto;
     width: 800px;
 }
 
-#rotas h1{
+#rotas h1 {
     border: 0px solid red;
     text-align: center;
     font-family: serif;
@@ -374,18 +378,18 @@ div.text h1{
     margin: 0px 0px 30px 0px;
 }
 
-#rotas iframe{
+#rotas iframe {
     width: 100%;
 }
 
 /* Footer */
 
-Footer{
+Footer {
     background-color: #F7819F;
     padding: 10px;
 }
 
-Footer h1{
+Footer h1 {
     color: white;
     margin: 20px 0px 30px 0px;
     padding: 15px 30px;
@@ -393,79 +397,79 @@ Footer h1{
     font-size: 2.7em;
 }
 
-Footer .flex-bloco8{
+Footer .flex-bloco8 {
     color: white;
     display: flex;
     justify-content: center;
     column-gap: 20px;
 }
 
-footer .flex-bloco8{
+footer .flex-bloco8 {
     border: 0px solid black;
 }
 
-.flex-bloco8 div{
+.flex-bloco8 div {
     border: 0px solid black;
 }
 
-.flex-bloco8 h3{
+.flex-bloco8 h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
 }
 
-.flex-bloco8 ul{
+.flex-bloco8 ul {
     list-style: none;
 }
 
-.flex-bloco8 ul li{
+.flex-bloco8 ul li {
     margin-top: 8px;
 }
 
-.flex-bloco8 .sobre{
+.flex-bloco8 .sobre {
     width: 30%;
 }
 
-.flex-bloco8 .sobre p{
+.flex-bloco8 .sobre p {
     text-align: start;
     margin-top: 0px;
 }
 
-.flex-bloco8 .sobre h3{
+.flex-bloco8 .sobre h3 {
     margin-bottom: 18px;
 }
 
-.flex-bloco8 .categorias{
+.flex-bloco8 .categorias {
     margin-left: 50px;
     width: 20%;
 }
 
-.flex-bloco8 .categorias a{
+.flex-bloco8 .categorias a {
     text-decoration: none;
     color: white;
 }
 
-.flex-bloco8 .categorias a:hover{
+.flex-bloco8 .categorias a:hover {
     color: gray;
 }
 
-.flex-bloco8 .faleConosco{
+.flex-bloco8 .faleConosco {
     width: 35%;
 }
 
-footer .icones{
+footer .icones {
     margin: 40px 0px 0px 50px;
 }
 
-footer .icones a{
+footer .icones a {
     color: rgba(0, 0, 0, 0.0);
 }
 
-footer .icones i{
+footer .icones i {
     margin-left: 15px;
     color: white;
 }
 
-footer p{
+footer p {
     margin: 30px 0px 10px 0px;
     color: white;
     text-align: center;
