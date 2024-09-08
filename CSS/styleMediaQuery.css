@@ -6,6 +6,9 @@
     header h3{
       font-size: 2.4em;
     }
+    header{
+      height: 130px;
+    }
   }
   
   @media screen and (max-width: 756px){
@@ -17,6 +20,16 @@
     }
   }
 
+  @media screen and (min-width: 681px){
+    .active{
+      display: none;
+    }
+  }
+  @media screen and (max-width: 681px){
+    header{
+      height: 110px;
+    }
+  }
   @media screen and (min-width: 681px){
     .active{
       display: none;
@@ -47,6 +60,9 @@
     }
     .mobile-menu{
       top: 68px;
+    }
+    header{
+      height: 90px;
     }
   }
 

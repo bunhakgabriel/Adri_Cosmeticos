@@ -1,26 +1,37 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     font-family: sans-serif;
     background-color: #F8E0E6;
     overflow-x: hidden;
 }
 
-header{
+header {
+    z-index: 10;
+    top: 0px;
+    width: 100%;
+    height: 170px;
+    position: fixed;
+    position: static;
     display: flex;
     background-color: #F7819F;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/adesivo3.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
-header h3{
+header h3 {
     color: white;
     margin: 0;
     padding: 15px 30px;
@@ -28,7 +39,7 @@ header h3{
     font-size: 2.7em;
 }
 
-header ul{
+header ul {
     list-style: none;
     display: flex;
     justify-content: center;
@@ -36,27 +47,26 @@ header ul{
     font-size: 1.2em;
 }
 
-header ul a{
+header ul a {
     text-decoration: none;
     color: white;
 
 }
 
-header ul li{
+header ul li {
     padding: 10px 20px;
-    border: 1px solid #F7819F;
 }
 
-header ul li:hover{
+header ul li:hover {
     border: 1px solid white;
     transition: 0.5s;
 }
 
-header ul li.atual{
+header ul li.atual {
     border: 1px solid white;
 }
 
-div.icons a{
+div.icons a {
     margin: 0px;
     padding: 0px;
     list-style: none;
@@ -65,7 +75,7 @@ div.icons a{
     right: 20px;
 }
 
-div.icons .wpp-link{
+div.icons .wpp-link {
     background-color: #25d366;
     width: 70px;
     height: 65px;
@@ -79,24 +89,24 @@ div.icons .wpp-link{
 
 /* Menu responsivo */
 
-header .mobile-menu-icon{
+header .mobile-menu-icon {
     padding: 20px 15px;
     display: none;
     border: 0px solid red;
-  }
-  
-  header .mobile-menu-icon button{
+}
+
+header .mobile-menu-icon button {
     background-color: rgba(0, 0, 0, 0);
     padding: 10px;
     border: 0px;
-  }
-  
-  header .mobile-menu-icon i{
+}
+
+header .mobile-menu-icon i {
     color: white;
     font-size: 35px;
-  }
-  
-  .mobile-menu{
+}
+
+.mobile-menu {
     position: fixed;
     position: static;
     width: 100%;
@@ -104,29 +114,29 @@ header .mobile-menu-icon{
     padding: 10px;
     border-top: 1px solid white;
     background-color: #F7819F;
-  }
-  
-  .mobile-menu a{
+}
+
+.mobile-menu a {
     font-family: sans-serif;
     color: white;
     text-decoration: none;
     font-size: 1.2em;
-  }
-  
-  .mobile-menu ul{
+}
+
+.mobile-menu ul {
     padding: 0px;
     text-align: center;
     list-style: none;
-  }
-  
-  .mobile-menu ul li{
-    border-bottom: 1px solid white ;
+}
+
+.mobile-menu ul li {
+    border-bottom: 1px solid white;
     padding: 15px 5px;
-  }
-  
-  .active{
+}
+
+.active {
     display: block;
-  }
+}
 
 /* Fim menu responsivo */
 
@@ -138,110 +148,129 @@ header .mobile-menu-icon{
    Perfumes 
 */
 
-#pesquisar{
+#pesquisar {
     width: 1000px;
     margin: 60px auto 30px auto;
     border: 0px solid black;
     display: flex;
 }
 
-#pesquisar label{
+#pesquisar label {
     font-size: 1.4em;
     padding-left: 20px;
 }
 
-input#pesquisa{
+input#pesquisa {
     width: 350px;
     border-radius: 10px;
     border: 1px solid gray;
     margin-left: 20px;
     padding: 10px;
-} 
+}
 
-#btnBusca, #btnVoltar{
+#btnBusca,
+#btnVoltar {
     padding-top: 3px;
     border: 0px solid red;
     margin: 4px;
     font-size: 1.5em;
 }
 
-#btnBusca:hover, #btnVoltar:hover{
+#btnBusca:hover,
+#btnVoltar:hover {
     cursor: pointer;
 }
 
-#manicurePedicure{
+#manicurePedicure {
     width: 1000px;
     margin: 30px auto;
 }
 
-#salao, #lash{
+#salao,
+#lash {
     margin: 100px auto;
     width: 1000px;
 }
 
-#manicurePedicure h2, #salao h2, #lash h2{
+#manicurePedicure h2,
+#salao h2,
+#lash h2 {
     margin: 40px 0px;
     font-size: 2.5em;
     font-family: serif;
     font-weight: 100;
     padding-left: 20px;
-} 
+}
 
-.produtosManicure, .produtosSalao, .produtosLash{
+.produtosManicure,
+.produtosSalao,
+.produtosLash {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     row-gap: 30px;
 }
 
-h5{
+h5 {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-.produtosManicure div, .produtosSalao div, .produtosLash div{
+.produtosManicure div,
+.produtosSalao div,
+.produtosLash div {
     padding-top: 20px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
     width: 21%;
     height: 280px;
 }
 
-.produtosManicure div:hover, .produtosSalao div:hover, .produtosLash div:hover{
+.produtosManicure div:hover,
+.produtosSalao div:hover,
+.produtosLash div:hover {
     cursor: pointer;
     scale: 1.2;
     transition: .6s;
 }
 
-.produtosManicure div h4, .produtosSalao div h4, .produtosLash div h4{
+.produtosManicure div h4,
+.produtosSalao div h4,
+.produtosLash div h4 {
     text-align: center;
     font-family: serif;
 }
 
-.produtosManicure div img, .produtosSalao div img, .produtosLash div img{
+.produtosManicure div img,
+.produtosSalao div img,
+.produtosLash div img {
     width: 100%;
     height: 75%;
 }
 
 /* produtos display-none */
 
-#manicurePedicure .display-none, #salao .display-none, #lash .display-none{
+#manicurePedicure .display-none,
+#salao .display-none,
+#lash .display-none {
     display: none;
     width: 100%;
     height: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     position: fixed;
     background-color: rgba(150, 150, 150, .6);
     backdrop-filter: blur(2px);
 }
 
-#manicurePedicure .display-none.active, #salao .display-none.active, #lash .display-none.active{
+#manicurePedicure .display-none.active,
+#salao .display-none.active,
+#lash .display-none.active {
     display: block;
 }
 
-.produto{
+.produto {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -252,39 +281,39 @@ h5{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 }
 
-.produto .conteudo{
+.produto .conteudo {
     width: 100%;
     color: white;
     background-color: #2E2E2E;
     padding-bottom: 20px;
 }
 
-.produto h1{
+.produto h1 {
     font-family: serif;
     margin-top: 70px;
     font-size: 1.6em;
     padding-left: 20px;
 }
 
-.produto h3{
+.produto h3 {
     text-align: left;
     font-size: 2em;
     padding-left: 20px;
     font-weight: 100;
 }
 
-.produto p{
+.produto p {
     font-family: serif;
     padding: 20px;
     font-size: 1.2em;
 }
 
-.display-none .saibaMais{
+.display-none .saibaMais {
     display: flex;
     column-gap: 10%;
 }
 
-.display-none a{
+.display-none a {
     display: block;
     font-family: serif;
     font-size: 1.2em;
@@ -296,19 +325,19 @@ h5{
     padding: 4px 10px;
 }
 
-.display-none a:hover{
+.display-none a:hover {
     cursor: pointer;
     color: #848484;
 }
 
 /* Footer */
 
-Footer{
+Footer {
     background-color: #F7819F;
     padding: 10px;
 }
 
-Footer h1{
+Footer h1 {
     color: white;
     margin: 20px 0px 30px 0px;
     padding: 15px 30px;
@@ -316,73 +345,73 @@ Footer h1{
     font-size: 2.7em;
 }
 
-Footer .flex-bloco8{
+Footer .flex-bloco8 {
     color: white;
     display: flex;
     justify-content: center;
     column-gap: 5px;
 }
 
-Footer .flex-bloco8 div{
+Footer .flex-bloco8 div {
     border: 1px solid black;
 }
 
-.flex-bloco8 h3{
+.flex-bloco8 h3 {
     font-size: 1.8em;
     margin-bottom: 20px;
 }
 
-.flex-bloco8 ul{
+.flex-bloco8 ul {
     list-style: none;
 }
 
-.flex-bloco8 ul li{
+.flex-bloco8 ul li {
     margin-top: 8px;
 }
 
-.flex-bloco8 .sobre{
+.flex-bloco8 .sobre {
     border: 0px solid green;
     width: 30%;
 }
 
-.flex-bloco8 .sobre p{
+.flex-bloco8 .sobre p {
     text-align: start;
 }
 
-.flex-bloco8 .categorias{
+.flex-bloco8 .categorias {
     margin-left: 50px;
     border: 0px solid green;
     width: 20%;
 }
 
-.flex-bloco8 .categorias a{
+.flex-bloco8 .categorias a {
     text-decoration: none;
     color: white;
 }
 
-.flex-bloco8 .categorias a:hover{
+.flex-bloco8 .categorias a:hover {
     color: gray;
 }
 
-.flex-bloco8 .faleConosco{
+.flex-bloco8 .faleConosco {
     border: 0px solid green;
     width: 35%;
 }
 
-footer .icones{
+footer .icones {
     margin: 40px 0px 0px 50px;
 }
 
-footer .icones a{
+footer .icones a {
     color: rgba(0, 0, 0, 0.0);
 }
 
-footer .icones i{
+footer .icones i {
     margin-left: 15px;
     color: white;
 }
 
-footer p{
+footer p {
     margin: 30px 0px 10px 0px;
     color: white;
     text-align: center;
