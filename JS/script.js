@@ -31,7 +31,7 @@ let init = setInterval( () =>{
     cont++
     if(cont == 10){cont = 0}            
 
-}, 4000)
+}, 400000000)
 
 /* Função vizualizar produtos individualmente */
 let divDisplayNone = document.getElementsByClassName('display-none')
