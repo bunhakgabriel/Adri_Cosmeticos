@@ -19,9 +19,9 @@ const typewriterInit = () => {
         typeWriterTitle.innerHTML += `&nbsp;`
     }
 
-    // if(c === 13 || c === 32){
-    //     typeWriterTitle.innerHTML += `<br>` 
-    // }
+    if(c === 33){
+        typeWriterTitle.innerHTML += `<br>` 
+    }
 
     c++
     if(c >= 45){

@@ -62,6 +62,24 @@ header h3{
     font-size: 2.7em;
 }
 
+header #mySelect{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid rgba(0, 0, 0, 0);
+    color: white;
+    padding: 10px 5px;
+    font-size: 1em;
+    text-align: center;
+}
+
+header #mySelect:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+header #mySelect option{
+    color: black;
+}
+
 header ul{
     list-style: none;
     display: flex;
@@ -74,7 +92,6 @@ header ul{
 header ul a{
     text-decoration: none;
     color: white;
-
 }
 
 header ul li.atual{
@@ -82,6 +99,7 @@ header ul li.atual{
 }
 
 header ul li{
+    border: 1px solid rgba(0, 0, 0, 0.0);
     padding: 10px 20px;
 }
 
@@ -148,15 +166,13 @@ header .mobile-menu-icon{
 /* Fim menu responsivo */
 
 #bloco1{
-    border: 0px solid black;
     margin: 50px auto 50px auto;
-    display: flex;
-    justify-content: center;
     width: 1280px;
 }
 
 #bloco1 h1{
     border: 0px solid red;
+    text-align: center;
     font-weight: 100;
     font-size: 3em;
     font-family: serif;
@@ -171,7 +187,7 @@ header .mobile-menu-icon{
     left: 10%;
     margin: 30px auto;
     overflow: hidden;
-    width: 1000px;
+    width: 750px;
     height: 200px;
 }
 
@@ -183,7 +199,7 @@ header .mobile-menu-icon{
 }
 
 .slide{
-    width: 6.2%;
+    width: 8.3%;
     transition: 1s;
 }
 

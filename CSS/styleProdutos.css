@@ -39,6 +39,24 @@ header h3 {
     font-size: 2.7em;
 }
 
+header #mySelect{
+    background-color: rgba(0, 0, 0, 0.0);
+    border: 1px solid white;
+    color: white;
+    padding: 10px 0px;
+    font-size: 1em;
+    text-align: center;
+}
+
+header #mySelect:hover{
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+header #mySelect option{
+    color: black;
+}
+
 header ul {
     list-style: none;
     display: flex;
@@ -55,6 +73,7 @@ header ul a {
 
 header ul li {
     padding: 10px 20px;
+    border: 1px solid rgba(0, 0, 0, 0);
 }
 
 header ul li:hover {
