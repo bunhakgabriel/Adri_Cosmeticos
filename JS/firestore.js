@@ -140,6 +140,7 @@ const renderizarProdutos = (array_db, colecao) => {
 
 let x = true
 const buscarCollectionData = async () => {
+    console.log('teste')
     return new Promise(async (res, rej) => {
         const colecoes = ["manicurePedicure", "salao", "lash"]
 
@@ -150,6 +151,8 @@ const buscarCollectionData = async () => {
                 array_db.push(doc.data())
             })
             x = false
+            localStorage[col] = JSON.stringify(array_db)
+            console.log(array_db)
             await renderizarProdutos(array_db, col);
         })
         res("sucess")
@@ -162,7 +165,18 @@ window.addEventListener('load', async function () {
     const url = new URL(this.window.location.href);
     param = new URLSearchParams(url.search);
     sessao = param.get('sessao');
-    await buscarCollectionData()
+
+    if(localStorage.manicurePedicure && localStorage.lash && localStorage.salao){
+        console.log('Existe dados no storage')
+        const colecoes = ["manicurePedicure", "salao", "lash"]
+        colecoes.forEach(async (col) => {
+            await renderizarProdutos(JSON.parse(localStorage[col]), col);
+        })
+        x = false
+    } else {
+        console.log('chamada backend')
+        await buscarCollectionData()
+    }
 
     this.setTimeout(() => {
         if (sessao && !x) {
