@@ -45,141 +45,136 @@ const criarLinkWpp = (produto) => {
 }
 
 const renderizarDisplaynone = (array_db, colecao) => {
-    array_db.forEach(i => {
-        const divDisplayNone = criarDiv();
-        divDisplayNone.classList.add('display-none');
+    return new Promise(async (res, rej) => {
+        array_db.forEach(i => {
+            const divDisplayNone = criarDiv();
+            divDisplayNone.classList.add('display-none');
 
-        const divProdutoDisplayNone = criarDiv();
-        divProdutoDisplayNone.classList.add('produtos-display-none', 'produto');
+            const divProdutoDisplayNone = criarDiv();
+            divProdutoDisplayNone.classList.add('produtos-display-none', 'produto');
 
-        const img = document.createElement('img');
-        img.setAttribute('src', i.url);
+            const img = document.createElement('img');
+            img.setAttribute('src', i.url);
 
-        const divConteudo = criarDiv();
-        divConteudo.classList.add('conteudo');
+            const divConteudo = criarDiv();
+            divConteudo.classList.add('conteudo');
 
-        const pCod = document.createElement('p');
-        pCod.innerText = 'Código: ' + i.codigo;
-        pCod.style.margin = '0px';
+            const pCod = document.createElement('p');
+            pCod.innerText = 'Código: ' + i.codigo;
+            pCod.style.margin = '0px';
 
-        const h1 = document.createElement('h1');
-        h1.innerText = i.produto;
-        h1.style.margin = '0px'
+            const h1 = document.createElement('h1');
+            h1.innerText = i.produto;
+            h1.style.margin = '0px'
 
-        const p = document.createElement('p');
-        p.innerText = i.descricao;
+            const p = document.createElement('p');
+            p.innerText = i.descricao;
 
-        const divSaibaMais = criarDiv();
-        divSaibaMais.classList.add('saibaMais');
+            const divSaibaMais = criarDiv();
+            divSaibaMais.classList.add('saibaMais');
 
-        const h3 = document.createElement('h3');
-        h3.innerText = `R$ ${i.preco}`
+            const h3 = document.createElement('h3');
+            h3.innerText = `R$ ${i.preco}`
 
-        const a = document.createElement('a');
-        a.innerText = 'Saiba mais';
-        a.setAttribute('href', criarLinkWpp(i.produto));
+            const a = document.createElement('a');
+            a.innerText = 'Saiba mais';
+            a.setAttribute('href', criarLinkWpp(i.produto));
 
-        divSaibaMais.appendChild(h3);
-        divSaibaMais.appendChild(a);
-        divConteudo.appendChild(pCod);
-        divConteudo.appendChild(h1);
-        divConteudo.appendChild(p);
-        divConteudo.appendChild(divSaibaMais);
-        divProdutoDisplayNone.appendChild(img);
-        divProdutoDisplayNone.appendChild(divConteudo);
-        divDisplayNone.appendChild(divProdutoDisplayNone);
+            divSaibaMais.appendChild(h3);
+            divSaibaMais.appendChild(a);
+            divConteudo.appendChild(pCod);
+            divConteudo.appendChild(h1);
+            divConteudo.appendChild(p);
+            divConteudo.appendChild(divSaibaMais);
+            divProdutoDisplayNone.appendChild(img);
+            divProdutoDisplayNone.appendChild(divConteudo);
+            divDisplayNone.appendChild(divProdutoDisplayNone);
 
-        if (colecao == 'manicurePedicure') {
-            manicure.appendChild(divDisplayNone);
-        } else if (colecao == 'salao') {
-            salao.appendChild(divDisplayNone);
-        } else if (colecao == 'lash') {
-            lash.appendChild(divDisplayNone);
+            if (colecao == 'manicurePedicure') {
+                manicure.appendChild(divDisplayNone);
+            } else if (colecao == 'salao') {
+                salao.appendChild(divDisplayNone);
+            } else if (colecao == 'lash') {
+                lash.appendChild(divDisplayNone);
+            }
+
+        })
+        if (param.size === 0 && !sessao) {
+            displayNoneLoader()
         }
-
+        res("sucess")
     })
-    if(param.size === 0 && !sessao){  
-        displayNoneLoader()
-    }
 }
 
 const renderizarProdutos = (array_db, colecao) => {
+    return new Promise(async (res, rej) => {
+        array_db.forEach(i => {
+            const div = criarDiv();
+            const img = document.createElement('img');
+            const h4 = document.createElement('h4');
+            div.classList.add('produtos');
 
-    array_db.forEach(i => {
-        const div = criarDiv();
-        const img = document.createElement('img');
-        const h4 = document.createElement('h4');
-        div.classList.add('produtos');
+            img.setAttribute('src', i.url);
+            h4.innerText = i.produto;
 
-        img.setAttribute('src', i.url);
-        h4.innerText = i.produto;
+            if (i.estoque < 1) {
+                div.innerHTML = `<h5>Indisponivel no momento</h5>`
+                div.style.opacity = '0.3';
+            }
 
-        if (i.estoque < 1) {
-            div.innerHTML = `<h5>Indisponivel no momento</h5>`
-            div.style.opacity = '0.3';
-        }
+            div.appendChild(img);
+            div.appendChild(h4);
 
-        div.appendChild(img);
-        div.appendChild(h4);
-
-        if (colecao == 'manicurePedicure') {
-            produtosManicure.appendChild(div);
-        } else if (colecao == 'salao') {
-            produtosSalao.appendChild(div);
-        } else if (colecao == 'lash') {
-            produtosLash.appendChild(div);
-        }
+            if (colecao == 'manicurePedicure') {
+                produtosManicure.appendChild(div);
+            } else if (colecao == 'salao') {
+                produtosSalao.appendChild(div);
+            } else if (colecao == 'lash') {
+                produtosLash.appendChild(div);
+            }
+        })
+        await renderizarDisplaynone(array_db, colecao)
+        res("sucess")
     })
-    renderizarDisplaynone(array_db, colecao)
 }
 
-
-
+let x = true
 const buscarCollectionData = async () => {
-    const colecoes = ["manicurePedicure", "salao", "lash"]
+    return new Promise(async (res, rej) => {
+        const colecoes = ["manicurePedicure", "salao", "lash"]
 
-    colecoes.forEach(async (col) => {
-        const array_db = new Array;
-        const doc = await getDocs(collection(db, col));
-        doc.forEach(doc => {
-            array_db.push(doc.data())
+        colecoes.forEach(async (col) => {
+            const array_db = new Array;
+            const doc = await getDocs(collection(db, col));
+            doc.forEach(doc => {
+                array_db.push(doc.data())
+            })
+            x = false
+            await renderizarProdutos(array_db, col);
         })
-        renderizarProdutos(array_db, col);
+        res("sucess")
     })
 };
-const abrirProdutoIndividual = async (codigo) => {
-        // let divDisplayNone = document.getElementsByClassName('display-none')
-        // let produtos = document.querySelectorAll('.produtos')
-        // // for(let c = 0; c < produtos.length; c++){
-        // //     if(produtos[c].innerText === codigo){
-        // //         divDisplayNone[c].classList.add('active')
-        // //     }
-        // // }
-        const inputPesquisa = document.getElementById('pesquisa');
-        inputPesquisa.value = codigo;
-        const produtos = document.querySelectorAll('.produtos');
-        await produtos.forEach(item => {
-            const h4 = item.querySelector('h4').innerText.toLowerCase();
-            item.style.display = (true && !h4.includes(inputPesquisa.value.toLowerCase())) ? 'none' : 'block';
-        })
-}
 
 let param;
 let sessao;
-window.addEventListener('load', function () {
+window.addEventListener('load', async function () {
     const url = new URL(this.window.location.href);
     param = new URLSearchParams(url.search);
     sessao = param.get('sessao');
-    const nameProduto = param.get('codigo')
-    buscarCollectionData()
+
+    await buscarCollectionData()
 
     this.setTimeout(() => {
-       if(sessao){
-        document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
-        return displayNoneLoader();
-    } else if(nameProduto){
-        abrirProdutoIndividual(nameProduto)
-        return displayNoneLoader()
-    }
-    }, 1500)
+        if (sessao && !x) {
+            document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
+            return displayNoneLoader();
+        }
+    }, 2000)
 });
+
+setTimeout(() => {
+    if (x) {
+        window.location.reload();
+    }
+}, 2500)

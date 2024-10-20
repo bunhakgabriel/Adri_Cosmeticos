@@ -79,21 +79,20 @@
 @media screen and (max-width: 1299px){
     #bloco1{
       width: 100vw;
-      height: 400px;
+      border: 0px solid red;
+    }
+
+    #bloco1 h1{
       border: 0px solid red;
     }
  }
 
 @media screen and (max-width: 1140px){
-    div.text h1{
+    #bloco1 h1{
         font-size: 2.4em;
     }
     #bloco1{
         width: 95vw;
-    }
-    #bloco1 div.img{
-     width: 40%;
-     height: 350px;
     }
     #bloco2{
      top: 350px;
@@ -106,19 +105,9 @@
  }  
 
  @media screen and (max-width: 970px){
-    #bloco1{
-        column-gap: 10px;
-    }
-    #bloco1 div.text{
-        width: 50%;
-    }
-    div.text h1{
+    #bloco1 h1{
         padding-left: 1%;
         font-size: 2.1em;
-    }
-    #bloco1 div.img{
-     width: 46%;
-     height: 280px;
     }
     #bloco2{
      top: 320px;
@@ -130,24 +119,9 @@
  }
 
  @media screen and (max-width: 700px){
-    #bloco1{
-      margin-top: 40px;
-      display: block;
-      height: 400px;
-    }
-    #bloco1 div.text{
-      width: 70%;
-      text-align: center;
-      margin: 15px auto 25px auto;
-    }
-    #bloco1 div.img{
-      width: 60%;
-      margin: 0 auto;
-    }
     #bloco2{
       position: static;
     }
-
  } 
 
  @media screen and (max-width: 620px){
@@ -155,14 +129,8 @@
       margin: 40px auto 10px auto;
       height: auto;
     }
-    #bloco1 div.text{
-      width: 70%;
-    }
-    div.text h1{
+    #bloco1 h1{
       font-size: 1.5em;
-    }
-    #bloco1 div.img{
-      width: 70%;
     }
     #bloco2{
       margin: 15px auto;
@@ -172,14 +140,8 @@
  }
 
  @media screen and (max-width: 460px){
-    #bloco1 div.text{
-      width: 80%;
-    }
-    div.text h1{
+    #bloco1 h1{
       font-size: 1.4em;
-    }
-    #bloco1 div.img{
-      width: 100%;
     }
     #bloco2{
       width: 90vw;
@@ -191,19 +153,8 @@
  }
 
  @media screen and (max-width: 370px){
-    #bloco1{
-      margin: 100px auto 0px auto;
-    }
-    #bloco1 div.text{
-      margin: 15px auto 25px auto;
-      width: 90%;
-    }
-    div.text h1{
+    #bloco1 h1{
       font-size: 1.2em;
-    }
-    #bloco1 div.img{
-      width: 95%;
-      height: 260px;
     }
     #bloco2{
       width: 90vw;
@@ -225,18 +176,8 @@
 }
 
 @media screen and (max-width: 310px){
-  #bloco1{
-
-  }
-  #bloco1 div.text{
-    width: 95%;
-  }
-  div.text h1{
+  #bloco1 h1{
     font-size: 1.1em;
-  }
-  #bloco1 div.img{
-    width: 100%;
-    height: 200px;
   }
   header h3{
     font-size: 1.5em;
