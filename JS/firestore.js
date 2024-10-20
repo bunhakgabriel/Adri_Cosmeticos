@@ -147,20 +147,20 @@ const renderizarProdutos = (array_db, colecao) => {
     })
 }
 
-let x = false
+let x = true
 const buscarCollectionData = async () => {
     return new Promise(async (res, rej) => {
         const colecoes = ["manicurePedicure", "salao", "lash"]
-        colecoes.forEach(async (col) => {
+        for (const col of colecoes) {
             const array_db = new Array;
             const doc = await getDocs(collection(db, col));
             doc.forEach(doc => {
-                array_db.push(doc.data())
-            })
-            x = false
-            localStorage[col] = JSON.stringify(array_db)
+                array_db.push(doc.data());
+            });
+            x = false;
+            localStorage[col] = JSON.stringify(array_db);
             await renderizarProdutos(array_db, col);
-        })
+        }
         res("sucess")
     })
 };
@@ -180,7 +180,6 @@ const verificarTotalBanco = async () => {
 
         if (localStorage.totalProdutos) {
             let totProdStorage = JSON.parse(localStorage["totalProdutos"])
-            console.log(totProdFirebase, totProdStorage)
             totProdStorage != totProdFirebase ?
                 localStorage["totalProdutos"] = JSON.stringify(totProdFirebase) :
                 retorno = true
@@ -208,7 +207,6 @@ const verificarVersaoBanco = async () => {
 
         if (localStorage.versaoProdutos) {
             let versionStorage = JSON.parse(localStorage["versaoProdutos"]);
-            console.log(versionFirebase, versionStorage)
             versionFirebase != versionStorage ?
                 localStorage["versaoProdutos"] = JSON.stringify(versionFirebase) :
                 retorno = true
@@ -229,9 +227,6 @@ window.addEventListener('load', async function () {
     const respTotProdBanco = await verificarTotalBanco();
     const respVersionBanco = await verificarVersaoBanco();
 
-    console.log('total produtos: ', respTotProdBanco)
-    console.log('versão produtos: ', respVersionBanco)
-
     if (
         localStorage.manicurePedicure &&
         localStorage.lash &&
@@ -250,6 +245,8 @@ window.addEventListener('load', async function () {
         await buscarCollectionData()
     }
 
+    renderizarIndividual()
+
     this.setTimeout(() => {
         if (sessao && !x) {
             document.getElementById(sessao).scrollIntoView({ behavior: 'smooth' });
@@ -263,3 +260,20 @@ setTimeout(() => {
         window.location.reload();
     }
 }, 2500)
+
+/* Função vizualizar produtos individualmente */
+let divDisplayNone = document.getElementsByClassName('display-none')
+let produtos = document.getElementsByClassName('produtos')
+
+const renderizarIndividual = () => {
+    for (let c = 0; c < produtos.length; c++) {
+        produtos[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.add('active')
+        })
+    }
+    for (let c = 0; c < produtos.length; c++) {
+        divDisplayNone[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.remove('active')
+        })
+    }
+}
