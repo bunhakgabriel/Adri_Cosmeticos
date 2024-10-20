@@ -8,24 +8,6 @@ btn_menu.addEventListener('click', e => {
         mobileMenu.classList.add('active')
 }) /* Fim função menu responsivo */
 
-/* Função vizualizar produtos individualmente */
-let divDisplayNone = document.getElementsByClassName('display-none')
-let produtos = document.getElementsByClassName('produtos')
-
-renderizarIndividual = () => {
-    for (let c = 0; c < produtos.length; c++) {
-        produtos[c].addEventListener('click', () => {
-            divDisplayNone[c].classList.add('active')
-        })
-    }
-    for (let c = 0; c < produtos.length; c++) {
-        divDisplayNone[c].addEventListener('click', () => {
-            divDisplayNone[c].classList.remove('active')
-        })
-    }
-}
-setTimeout(renderizarIndividual, 1500)
-
 //Função buscar produto
 const busca = (operacao) => {
     const text = document.getElementById('pesquisa');

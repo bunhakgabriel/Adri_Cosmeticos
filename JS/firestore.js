@@ -1,5 +1,14 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-app.js';
-import { getFirestore, getDocs, collection, addDoc, setDoc, doc } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js';
+import {
+    getFirestore,
+    getDocs,
+    collection,
+    addDoc,
+    setDoc,
+    doc,
+    query,
+    getCountFromServer
+} from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-firestore.js';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'https://www.gstatic.com/firebasejs/10.4.0/firebase-storage.js';
 
 const firebaseConfig = {
@@ -142,19 +151,71 @@ let x = true
 const buscarCollectionData = async () => {
     return new Promise(async (res, rej) => {
         const colecoes = ["manicurePedicure", "salao", "lash"]
-
-        colecoes.forEach(async (col) => {
+        for (const col of colecoes) {
             const array_db = new Array;
             const doc = await getDocs(collection(db, col));
             doc.forEach(doc => {
-                array_db.push(doc.data())
-            })
-            x = false
+                array_db.push(doc.data());
+            });
+            x = false;
+            localStorage[col] = JSON.stringify(array_db);
             await renderizarProdutos(array_db, col);
-        })
+        }
         res("sucess")
     })
 };
+
+const verificarTotalBanco = async () => {
+    return new Promise(async (res, rej) => {
+        let totProdFirebase = 0;
+        let retorno = false;
+
+        const colecoes = ["manicurePedicure", "salao", "lash"]
+        for (const col of colecoes) {
+            const collectionRef = collection(db, col);
+            const querySnapshot = query(collectionRef);
+            const countSnapshot = await getCountFromServer(querySnapshot);
+            totProdFirebase += countSnapshot.data().count;
+        }
+
+        if (localStorage.totalProdutos) {
+            let totProdStorage = JSON.parse(localStorage["totalProdutos"])
+            totProdStorage != totProdFirebase ?
+                localStorage["totalProdutos"] = JSON.stringify(totProdFirebase) :
+                retorno = true
+        } else {
+            localStorage["totalProdutos"] = JSON.stringify(totProdFirebase)
+        }
+
+
+
+        res(retorno)
+    })
+}
+
+const verificarVersaoBanco = async () => {
+    return new Promise(async (res, rej) => {
+        let versionFirebase = 0;
+        let retorno = false;
+
+        const versionSnapshot = await getDocs(collection(db, "version"));
+        // Verifica se há documentos na coleção "version"
+        if (!versionSnapshot.empty) {
+            const versionDoc = versionSnapshot.docs[0];  // Acessa o primeiro documento
+            versionFirebase = versionDoc.data().versao // Extrai os dados do documento
+        }
+
+        if (localStorage.versaoProdutos) {
+            let versionStorage = JSON.parse(localStorage["versaoProdutos"]);
+            versionFirebase != versionStorage ?
+                localStorage["versaoProdutos"] = JSON.stringify(versionFirebase) :
+                retorno = true
+        } else {
+            localStorage["versaoProdutos"] = JSON.stringify(versionFirebase)
+        }
+        res(retorno)
+    })
+}
 
 let param;
 let sessao;
@@ -163,7 +224,28 @@ window.addEventListener('load', async function () {
     param = new URLSearchParams(url.search);
     sessao = param.get('sessao');
 
-    await buscarCollectionData()
+    const respTotProdBanco = await verificarTotalBanco();
+    const respVersionBanco = await verificarVersaoBanco();
+
+    if (
+        localStorage.manicurePedicure &&
+        localStorage.lash &&
+        localStorage.salao &&
+        respTotProdBanco &&
+        respVersionBanco
+    ) {
+        console.log('Existe dados no storage')
+        const colecoes = ["manicurePedicure", "salao", "lash"]
+        colecoes.forEach(async (col) => {
+            await renderizarProdutos(JSON.parse(localStorage[col]), col);
+        })
+        x = false
+    } else {
+        console.log('chamada backend')
+        await buscarCollectionData()
+    }
+
+    renderizarIndividual()
 
     this.setTimeout(() => {
         if (sessao && !x) {
@@ -178,3 +260,20 @@ setTimeout(() => {
         window.location.reload();
     }
 }, 2500)
+
+/* Função vizualizar produtos individualmente */
+let divDisplayNone = document.getElementsByClassName('display-none')
+let produtos = document.getElementsByClassName('produtos')
+
+const renderizarIndividual = () => {
+    for (let c = 0; c < produtos.length; c++) {
+        produtos[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.add('active')
+        })
+    }
+    for (let c = 0; c < produtos.length; c++) {
+        divDisplayNone[c].addEventListener('click', () => {
+            divDisplayNone[c].classList.remove('active')
+        })
+    }
+}
