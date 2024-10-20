@@ -140,7 +140,6 @@ const renderizarProdutos = (array_db, colecao) => {
 
 let x = true
 const buscarCollectionData = async () => {
-    console.log('teste')
     return new Promise(async (res, rej) => {
         const colecoes = ["manicurePedicure", "salao", "lash"]
 
@@ -152,7 +151,6 @@ const buscarCollectionData = async () => {
             })
             x = false
             localStorage[col] = JSON.stringify(array_db)
-            console.log(array_db)
             await renderizarProdutos(array_db, col);
         })
         res("sucess")

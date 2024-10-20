@@ -1,10 +1,9 @@
 /* Função tipewriter */
 const titulo = [
-    'M','a','r','c','a','s','d','e','c','o',
-    'n','f','i','a','n','ç','a','p','a','r',
-    'a','p','o','t','e','n','c','i','a','l',
-    'i','z','a','r','s','e','u','s','e','r',
-    'v','i','ç','o','.'
+    'G','r','a','n','d','e','s','m','a','r',
+    'c','a','s','e','e','x','c','e','l','e',
+    'n','t','e','s','p','r','o','d','u','t',
+    'o','s','.'
 ]
 
 const typeWriterTitle = document.getElementById('typeWriterTitle')
@@ -12,14 +11,14 @@ let c = 0
 
 const typewriterInit = () => {
     typeWriterTitle.innerText += titulo[c]
-    if(c === 5 || c === 7 || c === 16 || c === 20 || c === 33 || c === 36){
+    if(c === 6 || c === 12 || c === 13 || c === 23){
         typeWriterTitle.innerHTML += `&nbsp;`
     }
     if(c === 33){
         typeWriterTitle.innerHTML += `<br>` 
     }
     c++
-    if(c >= 45){
+    if(c >= 33){
         clearInterval(interval)
     }
 }

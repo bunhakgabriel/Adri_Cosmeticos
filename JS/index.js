@@ -29,7 +29,7 @@ let init = setInterval(() => {
 const reloadPageProduto = (data) => {
     const params = new URLSearchParams();
     params.append('codigo', data)
-    const baseUrl = "http://127.0.0.1:5500/produtos.html?" + params.toString()
+    const baseUrl = "https://adricosmeticos.com/produtos.html?" + params.toString()
     window.location.href = baseUrl;
 }
 const btn_carrossel_produtos = document.querySelectorAll('.link_carrossel_produtos');
@@ -46,7 +46,7 @@ const btn_categorias = document.querySelectorAll('.btn_categorias')
 const reloadPage = (coletion) => {
     const params = new URLSearchParams();
     params.append('sessao', coletion)
-    const baseUrl = "http://127.0.0.1:5500/produtos.html?" + params.toString()
+    const baseUrl = "https://adricosmeticos.com/produtos.html?" + params.toString()
     console.log(baseUrl)
     window.location.href = baseUrl;
 }
