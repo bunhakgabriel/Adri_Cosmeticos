@@ -159,7 +159,7 @@ const buscarCollectionData = async () => {
             });
             x = false;
             localStorage[col] = JSON.stringify(array_db);
-            await renderizarProdutos(array_db, col);
+            await renderizarProdutos(array_db.sort((a,b) => a.produto.localeCompare(b.produto)), col);
         }
         res("sucess")
     })
@@ -237,7 +237,10 @@ window.addEventListener('load', async function () {
         console.log('Existe dados no storage')
         const colecoes = ["manicurePedicure", "salao", "lash"]
         colecoes.forEach(async (col) => {
-            await renderizarProdutos(JSON.parse(localStorage[col]), col);
+            const array = 
+                JSON.parse(localStorage[col])
+                .sort((a,b) => a.produto.localeCompare(b.produto));
+            await renderizarProdutos(array, col);
         })
         x = false
     } else {

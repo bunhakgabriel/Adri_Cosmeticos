@@ -15,5 +15,6 @@
         "tipewriter",
         "titulo",
         "transformação"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
